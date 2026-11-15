@@ -43,6 +43,23 @@ python3 scripts/evaluate_wcep_aggregation.py --articles events/news_events/artic
 - Event-level aggregation: WebNewsEvents **Acc@30 0.838** (top-3, recall 97.9%),
   WCEP full 0.598, WCEP pilot 0.598 - 3.7--5x above the document-level ceiling.
 
+## Training code
+
+`training_code/` contains the modified Search-R1/verl fork used to train the policy
+(Qwen2.5-7B-Instruct; PPO; 400 steps; regime-aware cost with per-regime search costs;
+details in the paper's setup section). It includes the patched `verl` library, the
+`timeagent` task package, `pyproject.toml`/`requirements.txt`, and the training entry
+scripts. The base model uses open Qwen2.5-7B-Instruct weights; trained checkpoints are
+not shipped due to size and can be requested via repository issues.
+
+```bash
+pip install -r training_code/requirements.txt
+# training (see paper for exact hyperparameters):
+python scripts/launch.py train --model <qwen2.5-7b-instruct> --variant temporal \
+    --gpus 8 --steps 400 --cost-by-regime "EXP:0.2,IMP:0.01,DIS:0.01" \
+    --retriever-url <frozen-index-server-url> --code-root training_code --run
+```
+
 ## Citation
 
 (to be added)
