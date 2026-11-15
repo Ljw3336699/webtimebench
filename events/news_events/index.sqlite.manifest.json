@@ -1,0 +1,14 @@
+{
+  "canonical_records_sha256": "465b66efeb82622b09111887ae2a485fff56399f964a8cbbc035f776534327f8",
+  "created_at_utc": "2026-11-13T18:28:57.865856+00:00",
+  "document_count": 161122,
+  "engine": "sqlite-fts5-bm25",
+  "index_sha256": "ed303076778c64eedbce67811facb996ae8aa17f71f6b6ce038ef4c713f5d2ee",
+  "query_terms": "OR over unique literal tokenizer terms, maximum 128",
+  "ranking": "bm25(title_terms weight=4, body_terms weight=1), corpus_id tie-break",
+  "schema": "timeagent-local-fts5-v1",
+  "source_corpus_path": "/root/paddlejob/workspace/env_run/ljw/timeagent/timeagent_revision_v2/data/custom/news_events_v1/corpus.jsonl",
+  "source_corpus_sha256": "1455ec8db311d3bf7f587719a8bf38217bd65478f75cc1196db1ff417a39f82e",
+  "sqlite_version": "3.53.4",
+  "tokenizer_version": "nfkc-lower-word-han-unigram-bigram-v1"
+}

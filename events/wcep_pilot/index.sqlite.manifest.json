@@ -1,0 +1,14 @@
+{
+  "canonical_records_sha256": "b133bea93ca67aff653571510c025ee82ff4d97d0ecbc99d1c10e2b8ce369c4c",
+  "created_at_utc": "2026-11-13T18:15:49.319107+00:00",
+  "document_count": 199,
+  "engine": "sqlite-fts5-bm25",
+  "index_sha256": "44dd6ed4b0eeb94f0ef7ca4ef5e630c732b2a9c8e690b4ebc2f5d77a8bf527bc",
+  "query_terms": "OR over unique literal tokenizer terms, maximum 128",
+  "ranking": "bm25(title_terms weight=4, body_terms weight=1), corpus_id tie-break",
+  "schema": "timeagent-local-fts5-v1",
+  "source_corpus_path": "/root/paddlejob/workspace/env_run/ljw/timeagent/timeagent_revision_v2/data/custom/wcep_pilot_v1/corpus.jsonl",
+  "source_corpus_sha256": "0eabeee1f57e51f613aff40f6449680840ee31e918babd49422515c8bf39f478",
+  "sqlite_version": "3.53.4",
+  "tokenizer_version": "nfkc-lower-word-han-unigram-bigram-v1"
+}

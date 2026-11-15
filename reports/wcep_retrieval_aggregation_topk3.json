@@ -1,0 +1,3404 @@
+{
+  "oracle": {
+    "acc_at_0": 0.4925,
+    "acc_at_7": 0.8543,
+    "acc_at_30": 0.8543
+  },
+  "bm25_topk": 3,
+  "bm25_recall_same_event": 0.9095,
+  "bm25_recall_denominator": 199,
+  "bm25_aggregate": {
+    "acc_at_0": 0.2462,
+    "acc_at_7": 0.5528,
+    "acc_at_30": 0.598
+  },
+  "cases": [
+    {
+      "id": "wcep_ebb7f2f154ea3c1998dff60b",
+      "event": "evt_5d147ad0ac35fce9b8c18c5d",
+      "gold": "2019-01-17",
+      "predicted_ordinal": 737076,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c76aa7c6ab45ba599e568169",
+          "date": "2019-01-18"
+        },
+        {
+          "corpus_id": "wcep_678f5d2deaa26512fb0b599c",
+          "date": "2019-01-17"
+        }
+      ]
+    },
+    {
+      "id": "wcep_c76aa7c6ab45ba599e568169",
+      "event": "evt_5d147ad0ac35fce9b8c18c5d",
+      "gold": "2019-01-18",
+      "predicted_ordinal": 737076,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_678f5d2deaa26512fb0b599c",
+          "date": "2019-01-17"
+        },
+        {
+          "corpus_id": "wcep_ebb7f2f154ea3c1998dff60b",
+          "date": "2019-01-17"
+        }
+      ]
+    },
+    {
+      "id": "wcep_678f5d2deaa26512fb0b599c",
+      "event": "evt_5d147ad0ac35fce9b8c18c5d",
+      "gold": "2019-01-17",
+      "predicted_ordinal": 737076,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c76aa7c6ab45ba599e568169",
+          "date": "2019-01-18"
+        },
+        {
+          "corpus_id": "wcep_ebb7f2f154ea3c1998dff60b",
+          "date": "2019-01-17"
+        }
+      ]
+    },
+    {
+      "id": "wcep_e181cf78c4377240c6279868",
+      "event": "evt_5d147ad0ac35fce9b8c18c5d",
+      "gold": "2019-01-17",
+      "predicted_ordinal": 737076,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c76aa7c6ab45ba599e568169",
+          "date": "2019-01-18"
+        },
+        {
+          "corpus_id": "wcep_678f5d2deaa26512fb0b599c",
+          "date": "2019-01-17"
+        }
+      ]
+    },
+    {
+      "id": "wcep_5752e4b51a83882b0df5e93e",
+      "event": "evt_7e414eb9545272978e108988",
+      "gold": "2019-01-29",
+      "predicted_ordinal": 737396,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_ead9d55457f6e5e86e1c8d45",
+          "date": "2019-01-29"
+        },
+        {
+          "corpus_id": "wcep_db4af70e4a56203d7100273b",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_ead9d55457f6e5e86e1c8d45",
+      "event": "evt_7e414eb9545272978e108988",
+      "gold": "2019-01-29",
+      "predicted_ordinal": 737396,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_5752e4b51a83882b0df5e93e",
+          "date": "2019-01-29"
+        },
+        {
+          "corpus_id": "wcep_db4af70e4a56203d7100273b",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_be3741fc9c09662f43daf648",
+      "event": "evt_7e414eb9545272978e108988",
+      "gold": "2019-01-29",
+      "predicted_ordinal": 737396,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_db4af70e4a56203d7100273b",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_5752e4b51a83882b0df5e93e",
+          "date": "2019-01-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_db4af70e4a56203d7100273b",
+      "event": "evt_7e414eb9545272978e108988",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737088,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_5752e4b51a83882b0df5e93e",
+          "date": "2019-01-29"
+        },
+        {
+          "corpus_id": "wcep_be3741fc9c09662f43daf648",
+          "date": "2019-01-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_4c875b12dfe51046da2a5d74",
+      "event": "evt_d2151c45bfb292e1a3e393e8",
+      "gold": "2019-02-07",
+      "predicted_ordinal": 737101,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_424823e45fe59d2731e7728b",
+          "date": "2019-02-08"
+        },
+        {
+          "corpus_id": "wcep_02c560e8d0c92091c3851d2a",
+          "date": "2019-02-15"
+        }
+      ]
+    },
+    {
+      "id": "wcep_450857e0b8fc31fed904f629",
+      "event": "evt_d2151c45bfb292e1a3e393e8",
+      "gold": "2019-02-08",
+      "predicted_ordinal": 737098,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_bbc5911d83810db82e4e775c",
+          "date": "2019-02-08"
+        },
+        {
+          "corpus_id": "wcep_424823e45fe59d2731e7728b",
+          "date": "2019-02-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a32f7553642b8228b266c712",
+      "event": "evt_d2151c45bfb292e1a3e393e8",
+      "gold": "2019-02-09",
+      "predicted_ordinal": 737098,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c16022936b533dff0b2a6fb3",
+          "date": "2019-02-08"
+        },
+        {
+          "corpus_id": "wcep_6acc69cdde869c2cf8615ca9",
+          "date": "2019-02-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_c16022936b533dff0b2a6fb3",
+      "event": "evt_d2151c45bfb292e1a3e393e8",
+      "gold": "2019-02-08",
+      "predicted_ordinal": 737098,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a32f7553642b8228b266c712",
+          "date": "2019-02-09"
+        },
+        {
+          "corpus_id": "wcep_6acc69cdde869c2cf8615ca9",
+          "date": "2019-02-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_26ae6b6b2e0386d069820e9d",
+      "event": "evt_89e72f192dc75272ecc56016",
+      "gold": "2019-03-27",
+      "predicted_ordinal": 737144,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_817c2ba26bf663ddc6aa116b",
+          "date": "2019-03-27"
+        },
+        {
+          "corpus_id": "wcep_3638196d9f9b584a8398c3de",
+          "date": "2019-03-26"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d9969b651eca548290e39c23",
+      "event": "evt_89e72f192dc75272ecc56016",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737144,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_817c2ba26bf663ddc6aa116b",
+          "date": "2019-03-27"
+        },
+        {
+          "corpus_id": "wcep_3638196d9f9b584a8398c3de",
+          "date": "2019-03-26"
+        }
+      ]
+    },
+    {
+      "id": "wcep_817c2ba26bf663ddc6aa116b",
+      "event": "evt_89e72f192dc75272ecc56016",
+      "gold": "2019-03-27",
+      "predicted_ordinal": 737424,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_26ae6b6b2e0386d069820e9d",
+          "date": "2019-03-27"
+        },
+        {
+          "corpus_id": "wcep_d9969b651eca548290e39c23",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_3638196d9f9b584a8398c3de",
+      "event": "evt_89e72f192dc75272ecc56016",
+      "gold": "2019-03-26",
+      "predicted_ordinal": 737145,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_26ae6b6b2e0386d069820e9d",
+          "date": "2019-03-27"
+        },
+        {
+          "corpus_id": "wcep_817c2ba26bf663ddc6aa116b",
+          "date": "2019-03-27"
+        }
+      ]
+    },
+    {
+      "id": "wcep_9993c655a60de9d1100176c0",
+      "event": "evt_beeb52eabb5c2818ac0cd9ba",
+      "gold": "2019-02-07",
+      "predicted_ordinal": 737096,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_01e35981e37ecd6ca927e906",
+          "date": "2019-02-06"
+        },
+        {
+          "corpus_id": "wcep_26b95cbe595ab029e02c736d",
+          "date": "2019-02-07"
+        }
+      ]
+    },
+    {
+      "id": "wcep_01e35981e37ecd6ca927e906",
+      "event": "evt_beeb52eabb5c2818ac0cd9ba",
+      "gold": "2019-02-06",
+      "predicted_ordinal": 737097,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_9993c655a60de9d1100176c0",
+          "date": "2019-02-07"
+        },
+        {
+          "corpus_id": "wcep_26b95cbe595ab029e02c736d",
+          "date": "2019-02-07"
+        }
+      ]
+    },
+    {
+      "id": "wcep_26b95cbe595ab029e02c736d",
+      "event": "evt_beeb52eabb5c2818ac0cd9ba",
+      "gold": "2019-02-07",
+      "predicted_ordinal": 737096,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_9993c655a60de9d1100176c0",
+          "date": "2019-02-07"
+        },
+        {
+          "corpus_id": "wcep_01e35981e37ecd6ca927e906",
+          "date": "2019-02-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_cd33bcd4c0c596ed4f2e043a",
+      "event": "evt_beeb52eabb5c2818ac0cd9ba",
+      "gold": "2019-02-07",
+      "predicted_ordinal": 737094,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_be5ff06ccc92ee8f6b5f21ec",
+          "date": "2019-01-19"
+        },
+        {
+          "corpus_id": "wcep_1582d5977ae90c7ceaf878fb",
+          "date": "2019-02-21"
+        }
+      ]
+    },
+    {
+      "id": "wcep_65477e64836f4af8a29fd6d9",
+      "event": "evt_5de30d70b5e4157e3e0daeb7",
+      "gold": "2019-03-07",
+      "predicted_ordinal": 737094,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_9a791d75d0edea9471e195a0",
+          "date": "2019-02-14"
+        },
+        {
+          "corpus_id": "wcep_8de573e18d57c4db1bbd447b",
+          "date": "2019-01-25"
+        }
+      ]
+    },
+    {
+      "id": "wcep_90a615cefb3421729b0af5b6",
+      "event": "evt_5de30d70b5e4157e3e0daeb7",
+      "gold": "2019-03-06",
+      "predicted_ordinal": 737092,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_21c485cc4518c8d034dbc6aa",
+          "date": "2019-02-11"
+        },
+        {
+          "corpus_id": "wcep_8de573e18d57c4db1bbd447b",
+          "date": "2019-01-25"
+        }
+      ]
+    },
+    {
+      "id": "wcep_8f336483f22c7d805f278b32",
+      "event": "evt_5de30d70b5e4157e3e0daeb7",
+      "gold": "2019-03-07",
+      "predicted_ordinal": 737415,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_dcb2f4397d06a2acfa5fdc81",
+          "date": "2019-03-08"
+        },
+        {
+          "corpus_id": "wcep_30aafa3c183c0c2d62d815e6",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_dcb2f4397d06a2acfa5fdc81",
+      "event": "evt_5de30d70b5e4157e3e0daeb7",
+      "gold": "2019-03-08",
+      "predicted_ordinal": 737414,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_30aafa3c183c0c2d62d815e6",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_8f336483f22c7d805f278b32",
+          "date": "2019-03-07"
+        }
+      ]
+    },
+    {
+      "id": "wcep_cf997555fa29c8148fe49b2d",
+      "event": "evt_76ab9e57d52b3b71169813b3",
+      "gold": "2019-02-21",
+      "predicted_ordinal": 737094,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_1582d5977ae90c7ceaf878fb",
+          "date": "2019-02-21"
+        },
+        {
+          "corpus_id": "wcep_be5ff06ccc92ee8f6b5f21ec",
+          "date": "2019-01-19"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d42c872b8d7737328f6bfc97",
+      "event": "evt_76ab9e57d52b3b71169813b3",
+      "gold": "2019-02-21",
+      "predicted_ordinal": 737391,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_be5ff06ccc92ee8f6b5f21ec",
+          "date": "2019-01-19"
+        },
+        {
+          "corpus_id": "wcep_b4052c18d4d07e3b65aef04b",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_1582d5977ae90c7ceaf878fb",
+      "event": "evt_76ab9e57d52b3b71169813b3",
+      "gold": "2019-02-21",
+      "predicted_ordinal": 737094,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_cf997555fa29c8148fe49b2d",
+          "date": "2019-02-21"
+        },
+        {
+          "corpus_id": "wcep_be5ff06ccc92ee8f6b5f21ec",
+          "date": "2019-01-19"
+        }
+      ]
+    },
+    {
+      "id": "wcep_b4052c18d4d07e3b65aef04b",
+      "event": "evt_76ab9e57d52b3b71169813b3",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737111,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d42c872b8d7737328f6bfc97",
+          "date": "2019-02-21"
+        },
+        {
+          "corpus_id": "wcep_cf997555fa29c8148fe49b2d",
+          "date": "2019-02-21"
+        }
+      ]
+    },
+    {
+      "id": "wcep_b02aa8f4633e98b5d1721a2f",
+      "event": "evt_9ea0fdeb897db0f58bc92a52",
+      "gold": "2019-04-17",
+      "predicted_ordinal": 737166,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_3d7868cc9426fbe191e4b4ec",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_2016a6ae8e7f1ad0f7c00fa6",
+          "date": "2019-04-16"
+        }
+      ]
+    },
+    {
+      "id": "wcep_24a481dce31eea8d137865a4",
+      "event": "evt_9ea0fdeb897db0f58bc92a52",
+      "gold": "2019-04-18",
+      "predicted_ordinal": 737166,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_3d7868cc9426fbe191e4b4ec",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_b02aa8f4633e98b5d1721a2f",
+          "date": "2019-04-17"
+        }
+      ]
+    },
+    {
+      "id": "wcep_2016a6ae8e7f1ad0f7c00fa6",
+      "event": "evt_9ea0fdeb897db0f58bc92a52",
+      "gold": "2019-04-16",
+      "predicted_ordinal": 737166,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_b02aa8f4633e98b5d1721a2f",
+          "date": "2019-04-17"
+        },
+        {
+          "corpus_id": "wcep_3d7868cc9426fbe191e4b4ec",
+          "date": "2019-04-18"
+        }
+      ]
+    },
+    {
+      "id": "wcep_3d7868cc9426fbe191e4b4ec",
+      "event": "evt_9ea0fdeb897db0f58bc92a52",
+      "gold": "2019-04-18",
+      "predicted_ordinal": 737166,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_24a481dce31eea8d137865a4",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_b02aa8f4633e98b5d1721a2f",
+          "date": "2019-04-17"
+        }
+      ]
+    },
+    {
+      "id": "wcep_424823e45fe59d2731e7728b",
+      "event": "evt_bf17dcdf099f8322fb5779b1",
+      "gold": "2019-02-08",
+      "predicted_ordinal": 737101,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_02c560e8d0c92091c3851d2a",
+          "date": "2019-02-15"
+        },
+        {
+          "corpus_id": "wcep_6acc69cdde869c2cf8615ca9",
+          "date": "2019-02-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_bbc5911d83810db82e4e775c",
+      "event": "evt_bf17dcdf099f8322fb5779b1",
+      "gold": "2019-02-08",
+      "predicted_ordinal": 737113,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a32f7553642b8228b266c712",
+          "date": "2019-02-09"
+        },
+        {
+          "corpus_id": "wcep_346a14cbc9e599181c6c2681",
+          "date": "2019-03-10"
+        }
+      ]
+    },
+    {
+      "id": "wcep_6acc69cdde869c2cf8615ca9",
+      "event": "evt_bf17dcdf099f8322fb5779b1",
+      "gold": "2019-02-08",
+      "predicted_ordinal": 737401,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c24d383e491826970dfde649",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_424823e45fe59d2731e7728b",
+          "date": "2019-02-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_857b3343f560384a07427294",
+      "event": "evt_bf17dcdf099f8322fb5779b1",
+      "gold": "2019-02-08",
+      "predicted_ordinal": 737098,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_424823e45fe59d2731e7728b",
+          "date": "2019-02-08"
+        },
+        {
+          "corpus_id": "wcep_6acc69cdde869c2cf8615ca9",
+          "date": "2019-02-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_8f93a942bedec62447e60d7f",
+      "event": "evt_63e2f5ce5aaa85e93c512b8e",
+      "gold": "2019-02-20",
+      "predicted_ordinal": 737110,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a763864f706f990a11d0fdab",
+          "date": "2019-02-20"
+        },
+        {
+          "corpus_id": "wcep_1184ef6b048e9863f64f0252",
+          "date": "2019-02-21"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a763864f706f990a11d0fdab",
+      "event": "evt_63e2f5ce5aaa85e93c512b8e",
+      "gold": "2019-02-20",
+      "predicted_ordinal": 737135,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_1184ef6b048e9863f64f0252",
+          "date": "2019-02-21"
+        },
+        {
+          "corpus_id": "wcep_7c15fc2c003af78d50ee4b7b",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d5adf61f091b93b6cb24dc47",
+      "event": "evt_63e2f5ce5aaa85e93c512b8e",
+      "gold": "2019-02-20",
+      "predicted_ordinal": 737432,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_2688906a06e244218e4799d8",
+          "date": "2019-04-11"
+        },
+        {
+          "corpus_id": "wcep_a32475c868f7838f0518b7a4",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_1184ef6b048e9863f64f0252",
+      "event": "evt_63e2f5ce5aaa85e93c512b8e",
+      "gold": "2019-02-21",
+      "predicted_ordinal": 737110,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a763864f706f990a11d0fdab",
+          "date": "2019-02-20"
+        },
+        {
+          "corpus_id": "wcep_d5adf61f091b93b6cb24dc47",
+          "date": "2019-02-20"
+        }
+      ]
+    },
+    {
+      "id": "wcep_c4813fcc77492185025d569f",
+      "event": "evt_26bc3494acba3462800101e4",
+      "gold": "2019-04-18",
+      "predicted_ordinal": 737167,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_ef1ac09cd43217ff75770b1b",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_0e1a0784187c9b21f83753ea",
+          "date": "2019-04-18"
+        }
+      ]
+    },
+    {
+      "id": "wcep_ef1ac09cd43217ff75770b1b",
+      "event": "evt_26bc3494acba3462800101e4",
+      "gold": "2019-04-18",
+      "predicted_ordinal": 737163,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_0e1a0784187c9b21f83753ea",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_8dd381a5582217d1e7f4ecd2",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_0e1a0784187c9b21f83753ea",
+      "event": "evt_26bc3494acba3462800101e4",
+      "gold": "2019-04-18",
+      "predicted_ordinal": 737163,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_2259f73608db4ba28b8ef410",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_c07e8e70deec17362e305cb6",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_2259f73608db4ba28b8ef410",
+      "event": "evt_26bc3494acba3462800101e4",
+      "gold": "2019-04-18",
+      "predicted_ordinal": 737167,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_0e1a0784187c9b21f83753ea",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_c4813fcc77492185025d569f",
+          "date": "2019-04-18"
+        }
+      ]
+    },
+    {
+      "id": "wcep_8ca9d9a601739e5286890fa1",
+      "event": "evt_705dc7b64607511cdd2c8fff",
+      "gold": "2019-01-10",
+      "predicted_ordinal": 737068,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_f0933acb6fed39783ff0d447",
+          "date": "2019-01-10"
+        },
+        {
+          "corpus_id": "wcep_a44dc67c45ac52b441a67274",
+          "date": "2019-01-09"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a44dc67c45ac52b441a67274",
+      "event": "evt_705dc7b64607511cdd2c8fff",
+      "gold": "2019-01-09",
+      "predicted_ordinal": 737069,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_8ca9d9a601739e5286890fa1",
+          "date": "2019-01-10"
+        },
+        {
+          "corpus_id": "wcep_f0933acb6fed39783ff0d447",
+          "date": "2019-01-10"
+        }
+      ]
+    },
+    {
+      "id": "wcep_f0933acb6fed39783ff0d447",
+      "event": "evt_705dc7b64607511cdd2c8fff",
+      "gold": "2019-01-10",
+      "predicted_ordinal": 737068,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_8ca9d9a601739e5286890fa1",
+          "date": "2019-01-10"
+        },
+        {
+          "corpus_id": "wcep_a44dc67c45ac52b441a67274",
+          "date": "2019-01-09"
+        }
+      ]
+    },
+    {
+      "id": "wcep_3f81865db78eea5c93a7e241",
+      "event": "evt_705dc7b64607511cdd2c8fff",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737068,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a44dc67c45ac52b441a67274",
+          "date": "2019-01-09"
+        },
+        {
+          "corpus_id": "wcep_f0933acb6fed39783ff0d447",
+          "date": "2019-01-10"
+        }
+      ]
+    },
+    {
+      "id": "wcep_4eeab825999753997f309378",
+      "event": "evt_127ad7efd8676ef749d238f8",
+      "gold": "2019-01-29",
+      "predicted_ordinal": 737088,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_51d415af30d13c63055b0b58",
+          "date": "2019-01-29"
+        },
+        {
+          "corpus_id": "wcep_b96d3d6625c8410870808004",
+          "date": "2019-01-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_b96d3d6625c8410870808004",
+      "event": "evt_127ad7efd8676ef749d238f8",
+      "gold": "2019-01-29",
+      "predicted_ordinal": 737088,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_4eeab825999753997f309378",
+          "date": "2019-01-29"
+        },
+        {
+          "corpus_id": "wcep_51d415af30d13c63055b0b58",
+          "date": "2019-01-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_51d415af30d13c63055b0b58",
+      "event": "evt_127ad7efd8676ef749d238f8",
+      "gold": "2019-01-29",
+      "predicted_ordinal": 737088,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_0bf82069567d7081d056eb5d",
+          "date": "2019-01-30"
+        },
+        {
+          "corpus_id": "wcep_4eeab825999753997f309378",
+          "date": "2019-01-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_0bf82069567d7081d056eb5d",
+      "event": "evt_127ad7efd8676ef749d238f8",
+      "gold": "2019-01-30",
+      "predicted_ordinal": 737088,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_51d415af30d13c63055b0b58",
+          "date": "2019-01-29"
+        },
+        {
+          "corpus_id": "wcep_4eeab825999753997f309378",
+          "date": "2019-01-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_5e69dd8174af943b8b27ca28",
+      "event": "evt_aa4d490663bd433f05d71b24",
+      "gold": "2019-02-14",
+      "predicted_ordinal": 737103,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_defa6f2a08b002d5ffb4319e",
+          "date": "2019-02-14"
+        },
+        {
+          "corpus_id": "wcep_ea9f95a7ae06b2e5df3811a3",
+          "date": "2019-02-13"
+        }
+      ]
+    },
+    {
+      "id": "wcep_bf07eed12865734f96d79cf8",
+      "event": "evt_aa4d490663bd433f05d71b24",
+      "gold": "2019-02-13",
+      "predicted_ordinal": 737103,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_ea9f95a7ae06b2e5df3811a3",
+          "date": "2019-02-13"
+        },
+        {
+          "corpus_id": "wcep_defa6f2a08b002d5ffb4319e",
+          "date": "2019-02-14"
+        }
+      ]
+    },
+    {
+      "id": "wcep_defa6f2a08b002d5ffb4319e",
+      "event": "evt_aa4d490663bd433f05d71b24",
+      "gold": "2019-02-14",
+      "predicted_ordinal": 737103,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_5e69dd8174af943b8b27ca28",
+          "date": "2019-02-14"
+        },
+        {
+          "corpus_id": "wcep_ea9f95a7ae06b2e5df3811a3",
+          "date": "2019-02-13"
+        }
+      ]
+    },
+    {
+      "id": "wcep_ea9f95a7ae06b2e5df3811a3",
+      "event": "evt_aa4d490663bd433f05d71b24",
+      "gold": "2019-02-13",
+      "predicted_ordinal": 737103,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_bf07eed12865734f96d79cf8",
+          "date": "2019-02-13"
+        },
+        {
+          "corpus_id": "wcep_defa6f2a08b002d5ffb4319e",
+          "date": "2019-02-14"
+        }
+      ]
+    },
+    {
+      "id": "wcep_c07e8e70deec17362e305cb6",
+      "event": "evt_ab90116a7f6c63ec6a7ad6a0",
+      "gold": "2019-04-11",
+      "predicted_ordinal": 737160,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_8dd381a5582217d1e7f4ecd2",
+          "date": "2019-04-11"
+        },
+        {
+          "corpus_id": "wcep_a2a49cf5253b4272a9139724",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_8dd381a5582217d1e7f4ecd2",
+      "event": "evt_ab90116a7f6c63ec6a7ad6a0",
+      "gold": "2019-04-11",
+      "predicted_ordinal": 737160,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c07e8e70deec17362e305cb6",
+          "date": "2019-04-11"
+        },
+        {
+          "corpus_id": "wcep_a2a49cf5253b4272a9139724",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a2a49cf5253b4272a9139724",
+      "event": "evt_ab90116a7f6c63ec6a7ad6a0",
+      "gold": "2019-04-11",
+      "predicted_ordinal": 737160,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c07e8e70deec17362e305cb6",
+          "date": "2019-04-11"
+        },
+        {
+          "corpus_id": "wcep_8dd381a5582217d1e7f4ecd2",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d5a5ea6a1c6f7018929ad243",
+      "event": "evt_ab90116a7f6c63ec6a7ad6a0",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737167,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c4813fcc77492185025d569f",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_ef1ac09cd43217ff75770b1b",
+          "date": "2019-04-18"
+        }
+      ]
+    },
+    {
+      "id": "wcep_f9e1876fba703320131fcc06",
+      "event": "evt_2f1ed126ee2481a20d7b4cdb",
+      "gold": "2019-03-21",
+      "predicted_ordinal": 737139,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d5dfcc23f10eccf5507febdc",
+          "date": "2019-03-22"
+        },
+        {
+          "corpus_id": "wcep_93e656121ec7472d7cc8d866",
+          "date": "2019-03-21"
+        }
+      ]
+    },
+    {
+      "id": "wcep_93e656121ec7472d7cc8d866",
+      "event": "evt_2f1ed126ee2481a20d7b4cdb",
+      "gold": "2019-03-21",
+      "predicted_ordinal": 737120,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_21c485cc4518c8d034dbc6aa",
+          "date": "2019-02-11"
+        },
+        {
+          "corpus_id": "wcep_250e5435906b9e39253f618c",
+          "date": "2019-03-22"
+        }
+      ]
+    },
+    {
+      "id": "wcep_250e5435906b9e39253f618c",
+      "event": "evt_2f1ed126ee2481a20d7b4cdb",
+      "gold": "2019-03-22",
+      "predicted_ordinal": 737139,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d5dfcc23f10eccf5507febdc",
+          "date": "2019-03-22"
+        },
+        {
+          "corpus_id": "wcep_93e656121ec7472d7cc8d866",
+          "date": "2019-03-21"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d5dfcc23f10eccf5507febdc",
+      "event": "evt_2f1ed126ee2481a20d7b4cdb",
+      "gold": "2019-03-22",
+      "predicted_ordinal": 737107,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_f9e1876fba703320131fcc06",
+          "date": "2019-03-21"
+        },
+        {
+          "corpus_id": "wcep_a0d3423d8ca3b11fcf6ac40d",
+          "date": "2019-01-16"
+        }
+      ]
+    },
+    {
+      "id": "wcep_0b1d585ca3f66a3929229fd8",
+      "event": "evt_e361b45e37bb7d5917ba9969",
+      "gold": "2019-01-20",
+      "predicted_ordinal": 737078,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_56d2c2836d1ec1ac810e8a86",
+          "date": "2019-01-18"
+        },
+        {
+          "corpus_id": "wcep_d5fb7ba1c3930e3bed0b4aa0",
+          "date": "2019-01-20"
+        }
+      ]
+    },
+    {
+      "id": "wcep_56d2c2836d1ec1ac810e8a86",
+      "event": "evt_e361b45e37bb7d5917ba9969",
+      "gold": "2019-01-18",
+      "predicted_ordinal": 737079,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d5fb7ba1c3930e3bed0b4aa0",
+          "date": "2019-01-20"
+        },
+        {
+          "corpus_id": "wcep_0b1d585ca3f66a3929229fd8",
+          "date": "2019-01-20"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d5fb7ba1c3930e3bed0b4aa0",
+      "event": "evt_e361b45e37bb7d5917ba9969",
+      "gold": "2019-01-20",
+      "predicted_ordinal": 737078,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_56d2c2836d1ec1ac810e8a86",
+          "date": "2019-01-18"
+        },
+        {
+          "corpus_id": "wcep_0b1d585ca3f66a3929229fd8",
+          "date": "2019-01-20"
+        }
+      ]
+    },
+    {
+      "id": "wcep_be5ff06ccc92ee8f6b5f21ec",
+      "event": "evt_e361b45e37bb7d5917ba9969",
+      "gold": "2019-01-19",
+      "predicted_ordinal": 737078,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_56d2c2836d1ec1ac810e8a86",
+          "date": "2019-01-18"
+        },
+        {
+          "corpus_id": "wcep_0b1d585ca3f66a3929229fd8",
+          "date": "2019-01-20"
+        }
+      ]
+    },
+    {
+      "id": "wcep_bf31287f7ccbd82b73691467",
+      "event": "evt_ac0e0fcf44d87dbdbc4cfb40",
+      "gold": "2019-03-01",
+      "predicted_ordinal": 737119,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d8c2af6cfbec0edac896ed06",
+          "date": "2019-03-01"
+        },
+        {
+          "corpus_id": "wcep_d6dfaace22464d7e8a6ca820",
+          "date": "2019-03-01"
+        }
+      ]
+    },
+    {
+      "id": "wcep_ac6bb69bf1ce317291f911cc",
+      "event": "evt_ac0e0fcf44d87dbdbc4cfb40",
+      "gold": "2019-03-01",
+      "predicted_ordinal": 737119,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d6dfaace22464d7e8a6ca820",
+          "date": "2019-03-01"
+        },
+        {
+          "corpus_id": "wcep_bf31287f7ccbd82b73691467",
+          "date": "2019-03-01"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d6dfaace22464d7e8a6ca820",
+      "event": "evt_ac0e0fcf44d87dbdbc4cfb40",
+      "gold": "2019-03-01",
+      "predicted_ordinal": 737119,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_ac6bb69bf1ce317291f911cc",
+          "date": "2019-03-01"
+        },
+        {
+          "corpus_id": "wcep_bf31287f7ccbd82b73691467",
+          "date": "2019-03-01"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d8c2af6cfbec0edac896ed06",
+      "event": "evt_ac0e0fcf44d87dbdbc4cfb40",
+      "gold": "2019-03-01",
+      "predicted_ordinal": 737119,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d6dfaace22464d7e8a6ca820",
+          "date": "2019-03-01"
+        },
+        {
+          "corpus_id": "wcep_bf31287f7ccbd82b73691467",
+          "date": "2019-03-01"
+        }
+      ]
+    },
+    {
+      "id": "wcep_88c67dd4b2a9d887f3da1674",
+      "event": "evt_888fb401e029e9152adfcc72",
+      "gold": "2019-01-21",
+      "predicted_ordinal": 737082,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_0a8893772eb7bdb9dc17f68e",
+          "date": "2019-01-23"
+        },
+        {
+          "corpus_id": "wcep_fbf604fd6c21553238501b10",
+          "date": "2019-01-23"
+        }
+      ]
+    },
+    {
+      "id": "wcep_fbf604fd6c21553238501b10",
+      "event": "evt_888fb401e029e9152adfcc72",
+      "gold": "2019-01-23",
+      "predicted_ordinal": 737081,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_88c67dd4b2a9d887f3da1674",
+          "date": "2019-01-21"
+        },
+        {
+          "corpus_id": "wcep_0a8893772eb7bdb9dc17f68e",
+          "date": "2019-01-23"
+        }
+      ]
+    },
+    {
+      "id": "wcep_eadb906e9be12389d66cb77d",
+      "event": "evt_888fb401e029e9152adfcc72",
+      "gold": "2019-01-22",
+      "predicted_ordinal": 737081,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_88c67dd4b2a9d887f3da1674",
+          "date": "2019-01-21"
+        },
+        {
+          "corpus_id": "wcep_0a8893772eb7bdb9dc17f68e",
+          "date": "2019-01-23"
+        }
+      ]
+    },
+    {
+      "id": "wcep_0a8893772eb7bdb9dc17f68e",
+      "event": "evt_888fb401e029e9152adfcc72",
+      "gold": "2019-01-23",
+      "predicted_ordinal": 737081,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_fbf604fd6c21553238501b10",
+          "date": "2019-01-23"
+        },
+        {
+          "corpus_id": "wcep_88c67dd4b2a9d887f3da1674",
+          "date": "2019-01-21"
+        }
+      ]
+    },
+    {
+      "id": "wcep_b50fbf2e98b1fd0e6e137f2d",
+      "event": "evt_eb93d0515d89956624587b9a",
+      "gold": "2019-01-25",
+      "predicted_ordinal": 737394,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_74b15f54a27db4920466aa92",
+          "date": "2019-01-25"
+        },
+        {
+          "corpus_id": "wcep_1cf9c15a484a5622dca51560",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_1cf9c15a484a5622dca51560",
+      "event": "evt_eb93d0515d89956624587b9a",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737084,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_74b15f54a27db4920466aa92",
+          "date": "2019-01-25"
+        },
+        {
+          "corpus_id": "wcep_b50fbf2e98b1fd0e6e137f2d",
+          "date": "2019-01-25"
+        }
+      ]
+    },
+    {
+      "id": "wcep_74b15f54a27db4920466aa92",
+      "event": "evt_eb93d0515d89956624587b9a",
+      "gold": "2019-01-25",
+      "predicted_ordinal": 737394,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_1cf9c15a484a5622dca51560",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_b50fbf2e98b1fd0e6e137f2d",
+          "date": "2019-01-25"
+        }
+      ]
+    },
+    {
+      "id": "wcep_09bbc3a639a781cf67c4b34b",
+      "event": "evt_eb93d0515d89956624587b9a",
+      "gold": "2019-01-24",
+      "predicted_ordinal": 737394,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_74b15f54a27db4920466aa92",
+          "date": "2019-01-25"
+        },
+        {
+          "corpus_id": "wcep_1cf9c15a484a5622dca51560",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_9b53c805129742aa011b0be4",
+      "event": "evt_01e9d9754a7a40287f93f92b",
+      "gold": "2019-02-21",
+      "predicted_ordinal": 737407,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_7f15ba201aad2a31b35366e2",
+          "date": "2019-02-21"
+        },
+        {
+          "corpus_id": "wcep_c24d383e491826970dfde649",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_7f15ba201aad2a31b35366e2",
+      "event": "evt_01e9d9754a7a40287f93f92b",
+      "gold": "2019-02-21",
+      "predicted_ordinal": 737112,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_9b53c805129742aa011b0be4",
+          "date": "2019-02-21"
+        },
+        {
+          "corpus_id": "wcep_9c1bc4950fb17521f27014de",
+          "date": "2019-02-23"
+        }
+      ]
+    },
+    {
+      "id": "wcep_9c1bc4950fb17521f27014de",
+      "event": "evt_01e9d9754a7a40287f93f92b",
+      "gold": "2019-02-23",
+      "predicted_ordinal": 737111,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_7f15ba201aad2a31b35366e2",
+          "date": "2019-02-21"
+        },
+        {
+          "corpus_id": "wcep_9b53c805129742aa011b0be4",
+          "date": "2019-02-21"
+        }
+      ]
+    },
+    {
+      "id": "wcep_c741b8015b0b4f32801dcfe7",
+      "event": "evt_01e9d9754a7a40287f93f92b",
+      "gold": "2019-02-20",
+      "predicted_ordinal": 737111,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_7f15ba201aad2a31b35366e2",
+          "date": "2019-02-21"
+        },
+        {
+          "corpus_id": "wcep_9b53c805129742aa011b0be4",
+          "date": "2019-02-21"
+        }
+      ]
+    },
+    {
+      "id": "wcep_9cb9c7173f98685a05b5e7d9",
+      "event": "evt_29b5d58dd5c17f1682b42699",
+      "gold": "2019-02-06",
+      "predicted_ordinal": 737399,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_216b608e849321e210baa576",
+          "date": "2019-02-05"
+        },
+        {
+          "corpus_id": "wcep_5ba0029bd66641c9b35794d3",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_f9de06d64b03adf61d693c34",
+      "event": "evt_29b5d58dd5c17f1682b42699",
+      "gold": "2019-02-05",
+      "predicted_ordinal": 737400,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_5ba0029bd66641c9b35794d3",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_9cb9c7173f98685a05b5e7d9",
+          "date": "2019-02-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_216b608e849321e210baa576",
+      "event": "evt_29b5d58dd5c17f1682b42699",
+      "gold": "2019-02-05",
+      "predicted_ordinal": 737400,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_9cb9c7173f98685a05b5e7d9",
+          "date": "2019-02-06"
+        },
+        {
+          "corpus_id": "wcep_5ba0029bd66641c9b35794d3",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_5ba0029bd66641c9b35794d3",
+      "event": "evt_29b5d58dd5c17f1682b42699",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737095,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_f9de06d64b03adf61d693c34",
+          "date": "2019-02-05"
+        },
+        {
+          "corpus_id": "wcep_9cb9c7173f98685a05b5e7d9",
+          "date": "2019-02-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a0d3423d8ca3b11fcf6ac40d",
+      "event": "evt_e85db97e0af29710a13e4fe6",
+      "gold": "2019-01-16",
+      "predicted_ordinal": 737075,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a649acce0430eded1fd1fd5d",
+          "date": "2019-01-16"
+        },
+        {
+          "corpus_id": "wcep_14b0b0b7cb434135c6b4c338",
+          "date": "2019-01-16"
+        }
+      ]
+    },
+    {
+      "id": "wcep_14b0b0b7cb434135c6b4c338",
+      "event": "evt_e85db97e0af29710a13e4fe6",
+      "gold": "2019-01-16",
+      "predicted_ordinal": 737075,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a649acce0430eded1fd1fd5d",
+          "date": "2019-01-16"
+        },
+        {
+          "corpus_id": "wcep_a0d3423d8ca3b11fcf6ac40d",
+          "date": "2019-01-16"
+        }
+      ]
+    },
+    {
+      "id": "wcep_e5dbdd4f3cecd183cdb9a94b",
+      "event": "evt_e85db97e0af29710a13e4fe6",
+      "gold": "2019-01-16",
+      "predicted_ordinal": 737075,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_14b0b0b7cb434135c6b4c338",
+          "date": "2019-01-16"
+        },
+        {
+          "corpus_id": "wcep_a0d3423d8ca3b11fcf6ac40d",
+          "date": "2019-01-16"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a649acce0430eded1fd1fd5d",
+      "event": "evt_e85db97e0af29710a13e4fe6",
+      "gold": "2019-01-16",
+      "predicted_ordinal": 737075,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_14b0b0b7cb434135c6b4c338",
+          "date": "2019-01-16"
+        },
+        {
+          "corpus_id": "wcep_a0d3423d8ca3b11fcf6ac40d",
+          "date": "2019-01-16"
+        }
+      ]
+    },
+    {
+      "id": "wcep_4fd2687a1f7ccc44d2c3096f",
+      "event": "evt_7ef10286834d5d7d91bd7e6e",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737089,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_fe7d0dc2e9d7cc70366900e3",
+          "date": "2019-01-31"
+        },
+        {
+          "corpus_id": "wcep_27908106b3867a97ba9b6db3",
+          "date": "2019-01-30"
+        }
+      ]
+    },
+    {
+      "id": "wcep_fe7d0dc2e9d7cc70366900e3",
+      "event": "evt_7ef10286834d5d7d91bd7e6e",
+      "gold": "2019-01-31",
+      "predicted_ordinal": 737396,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_4fd2687a1f7ccc44d2c3096f",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_27908106b3867a97ba9b6db3",
+          "date": "2019-01-30"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a886b4e99755a43809283fa5",
+      "event": "evt_7ef10286834d5d7d91bd7e6e",
+      "gold": "2019-02-01",
+      "predicted_ordinal": 737089,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_fe7d0dc2e9d7cc70366900e3",
+          "date": "2019-01-31"
+        },
+        {
+          "corpus_id": "wcep_27908106b3867a97ba9b6db3",
+          "date": "2019-01-30"
+        }
+      ]
+    },
+    {
+      "id": "wcep_27908106b3867a97ba9b6db3",
+      "event": "evt_7ef10286834d5d7d91bd7e6e",
+      "gold": "2019-01-30",
+      "predicted_ordinal": 737090,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_fe7d0dc2e9d7cc70366900e3",
+          "date": "2019-01-31"
+        },
+        {
+          "corpus_id": "wcep_a886b4e99755a43809283fa5",
+          "date": "2019-02-01"
+        }
+      ]
+    },
+    {
+      "id": "wcep_30aafa3c183c0c2d62d815e6",
+      "event": "evt_b7e95961d6c55acbe20d12ed",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737075,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_149c8fb8b845023233197630",
+          "date": "2019-01-24"
+        },
+        {
+          "corpus_id": "wcep_a44dc67c45ac52b441a67274",
+          "date": "2019-01-09"
+        }
+      ]
+    },
+    {
+      "id": "wcep_0e088717e5efddefd3336cf5",
+      "event": "evt_b7e95961d6c55acbe20d12ed",
+      "gold": "2019-03-09",
+      "predicted_ordinal": 737415,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_30aafa3c183c0c2d62d815e6",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_dcb2f4397d06a2acfa5fdc81",
+          "date": "2019-03-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_346a14cbc9e599181c6c2681",
+      "event": "evt_b7e95961d6c55acbe20d12ed",
+      "gold": "2019-03-10",
+      "predicted_ordinal": 737401,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_bbc5911d83810db82e4e775c",
+          "date": "2019-02-08"
+        },
+        {
+          "corpus_id": "wcep_512ced30b061d9b5a49e43e7",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a599367be96129bc71955f9d",
+      "event": "evt_b7e95961d6c55acbe20d12ed",
+      "gold": "2019-03-10",
+      "predicted_ordinal": 737125,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_8f336483f22c7d805f278b32",
+          "date": "2019-03-07"
+        },
+        {
+          "corpus_id": "wcep_dcb2f4397d06a2acfa5fdc81",
+          "date": "2019-03-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a243c3bd53ab603f200d11bd",
+      "event": "evt_6e44fba82cb164d1eeeb652b",
+      "gold": "2019-02-04",
+      "predicted_ordinal": 737094,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_3a54150ee28e291f65bb2bc5",
+          "date": "2019-02-04"
+        },
+        {
+          "corpus_id": "wcep_d7890c247e0bda8ee4bb449a",
+          "date": "2019-02-04"
+        }
+      ]
+    },
+    {
+      "id": "wcep_3a54150ee28e291f65bb2bc5",
+      "event": "evt_6e44fba82cb164d1eeeb652b",
+      "gold": "2019-02-04",
+      "predicted_ordinal": 737094,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a243c3bd53ab603f200d11bd",
+          "date": "2019-02-04"
+        },
+        {
+          "corpus_id": "wcep_677effc6795657e2bfa12eff",
+          "date": "2019-02-04"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d7890c247e0bda8ee4bb449a",
+      "event": "evt_6e44fba82cb164d1eeeb652b",
+      "gold": "2019-02-04",
+      "predicted_ordinal": 737094,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a243c3bd53ab603f200d11bd",
+          "date": "2019-02-04"
+        },
+        {
+          "corpus_id": "wcep_3a54150ee28e291f65bb2bc5",
+          "date": "2019-02-04"
+        }
+      ]
+    },
+    {
+      "id": "wcep_677effc6795657e2bfa12eff",
+      "event": "evt_6e44fba82cb164d1eeeb652b",
+      "gold": "2019-02-04",
+      "predicted_ordinal": 737094,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a243c3bd53ab603f200d11bd",
+          "date": "2019-02-04"
+        },
+        {
+          "corpus_id": "wcep_3a54150ee28e291f65bb2bc5",
+          "date": "2019-02-04"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a1c8dbd922f4f6b5c0cc42ef",
+      "event": "evt_c57649a00754ee7578418ceb",
+      "gold": "2019-04-29",
+      "predicted_ordinal": 737178,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_3a8d7ab331814a765abfcb19",
+          "date": "2019-04-29"
+        },
+        {
+          "corpus_id": "wcep_8819348abc5ef5ae3425a9ee",
+          "date": "2019-04-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_3a8d7ab331814a765abfcb19",
+      "event": "evt_c57649a00754ee7578418ceb",
+      "gold": "2019-04-29",
+      "predicted_ordinal": 737178,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a1c8dbd922f4f6b5c0cc42ef",
+          "date": "2019-04-29"
+        },
+        {
+          "corpus_id": "wcep_8819348abc5ef5ae3425a9ee",
+          "date": "2019-04-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_8819348abc5ef5ae3425a9ee",
+      "event": "evt_c57649a00754ee7578418ceb",
+      "gold": "2019-04-29",
+      "predicted_ordinal": 737178,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a1c8dbd922f4f6b5c0cc42ef",
+          "date": "2019-04-29"
+        },
+        {
+          "corpus_id": "wcep_3a8d7ab331814a765abfcb19",
+          "date": "2019-04-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_9e9f0b05bfbfd5e4a847de0e",
+      "event": "evt_c57649a00754ee7578418ceb",
+      "gold": "2019-04-30",
+      "predicted_ordinal": 737086,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_bd9bef2ab93a6f0066876511",
+          "date": "2019-01-31"
+        },
+        {
+          "corpus_id": "wcep_149c8fb8b845023233197630",
+          "date": "2019-01-24"
+        }
+      ]
+    },
+    {
+      "id": "wcep_21c485cc4518c8d034dbc6aa",
+      "event": "evt_01031090f5139b9532a47c96",
+      "gold": "2019-02-11",
+      "predicted_ordinal": 737402,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_209a4e3f503dcc01ed7cfe98",
+          "date": "2019-02-10"
+        },
+        {
+          "corpus_id": "wcep_0f2aedc6c9a501c93de3d2fd",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_209a4e3f503dcc01ed7cfe98",
+      "event": "evt_01031090f5139b9532a47c96",
+      "gold": "2019-02-10",
+      "predicted_ordinal": 737100,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_21c485cc4518c8d034dbc6aa",
+          "date": "2019-02-11"
+        },
+        {
+          "corpus_id": "wcep_366265ddbc3b6c48993bbff3",
+          "date": "2019-02-10"
+        }
+      ]
+    },
+    {
+      "id": "wcep_366265ddbc3b6c48993bbff3",
+      "event": "evt_01031090f5139b9532a47c96",
+      "gold": "2019-02-10",
+      "predicted_ordinal": 737402,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_209a4e3f503dcc01ed7cfe98",
+          "date": "2019-02-10"
+        },
+        {
+          "corpus_id": "wcep_0f2aedc6c9a501c93de3d2fd",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_0f2aedc6c9a501c93de3d2fd",
+      "event": "evt_01031090f5139b9532a47c96",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737100,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_21c485cc4518c8d034dbc6aa",
+          "date": "2019-02-11"
+        },
+        {
+          "corpus_id": "wcep_209a4e3f503dcc01ed7cfe98",
+          "date": "2019-02-10"
+        }
+      ]
+    },
+    {
+      "id": "wcep_149c8fb8b845023233197630",
+      "event": "evt_966e94883a03638187ae9d0e",
+      "gold": "2019-01-24",
+      "predicted_ordinal": 737098,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c16022936b533dff0b2a6fb3",
+          "date": "2019-02-08"
+        },
+        {
+          "corpus_id": "wcep_a32f7553642b8228b266c712",
+          "date": "2019-02-09"
+        }
+      ]
+    },
+    {
+      "id": "wcep_8de573e18d57c4db1bbd447b",
+      "event": "evt_966e94883a03638187ae9d0e",
+      "gold": "2019-01-25",
+      "predicted_ordinal": 737098,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c16022936b533dff0b2a6fb3",
+          "date": "2019-02-08"
+        },
+        {
+          "corpus_id": "wcep_a32f7553642b8228b266c712",
+          "date": "2019-02-09"
+        }
+      ]
+    },
+    {
+      "id": "wcep_cdb9708084ca78f96317a50d",
+      "event": "evt_966e94883a03638187ae9d0e",
+      "gold": "2019-01-23",
+      "predicted_ordinal": 737091,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_149c8fb8b845023233197630",
+          "date": "2019-01-24"
+        },
+        {
+          "corpus_id": "wcep_a32f7553642b8228b266c712",
+          "date": "2019-02-09"
+        }
+      ]
+    },
+    {
+      "id": "wcep_8231088702c786cfeb12ca9a",
+      "event": "evt_966e94883a03638187ae9d0e",
+      "gold": "2019-01-24",
+      "predicted_ordinal": 737404,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_512ced30b061d9b5a49e43e7",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_02c560e8d0c92091c3851d2a",
+          "date": "2019-02-15"
+        }
+      ]
+    },
+    {
+      "id": "wcep_249393835cf8908de3a1114e",
+      "event": "evt_f3f216b08e78d5e5c63c1258",
+      "gold": "2019-01-28",
+      "predicted_ordinal": 737396,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_8569a96eaa8a8f6f46ff151b",
+          "date": "2019-01-29"
+        },
+        {
+          "corpus_id": "wcep_3d91ed2cdffb864da6ff95f9",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_3d91ed2cdffb864da6ff95f9",
+      "event": "evt_f3f216b08e78d5e5c63c1258",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737087,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_ad9593a9ad393420c034ea66",
+          "date": "2019-01-28"
+        },
+        {
+          "corpus_id": "wcep_8569a96eaa8a8f6f46ff151b",
+          "date": "2019-01-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_8569a96eaa8a8f6f46ff151b",
+      "event": "evt_f3f216b08e78d5e5c63c1258",
+      "gold": "2019-01-29",
+      "predicted_ordinal": 737395,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_3d91ed2cdffb864da6ff95f9",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_249393835cf8908de3a1114e",
+          "date": "2019-01-28"
+        }
+      ]
+    },
+    {
+      "id": "wcep_ad9593a9ad393420c034ea66",
+      "event": "evt_f3f216b08e78d5e5c63c1258",
+      "gold": "2019-01-28",
+      "predicted_ordinal": 737396,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_3d91ed2cdffb864da6ff95f9",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_8569a96eaa8a8f6f46ff151b",
+          "date": "2019-01-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d3c253f940b01da1b4517bfe",
+      "event": "evt_a6e5f359c1adc33711e763e6",
+      "gold": "2019-04-18",
+      "predicted_ordinal": 737167,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_285ce6998a682f29412be6f7",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_21b7c0ac2828b1b292560b1b",
+          "date": "2019-04-18"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d396deaed5c8c24c41f5e539",
+      "event": "evt_a6e5f359c1adc33711e763e6",
+      "gold": "2019-04-18",
+      "predicted_ordinal": 737167,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_285ce6998a682f29412be6f7",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_d3c253f940b01da1b4517bfe",
+          "date": "2019-04-18"
+        }
+      ]
+    },
+    {
+      "id": "wcep_21b7c0ac2828b1b292560b1b",
+      "event": "evt_a6e5f359c1adc33711e763e6",
+      "gold": "2019-04-18",
+      "predicted_ordinal": 737167,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d3c253f940b01da1b4517bfe",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_285ce6998a682f29412be6f7",
+          "date": "2019-04-18"
+        }
+      ]
+    },
+    {
+      "id": "wcep_285ce6998a682f29412be6f7",
+      "event": "evt_a6e5f359c1adc33711e763e6",
+      "gold": "2019-04-18",
+      "predicted_ordinal": 737167,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d3c253f940b01da1b4517bfe",
+          "date": "2019-04-18"
+        },
+        {
+          "corpus_id": "wcep_21b7c0ac2828b1b292560b1b",
+          "date": "2019-04-18"
+        }
+      ]
+    },
+    {
+      "id": "wcep_c7872c1964c30af2df3fec0d",
+      "event": "evt_636685eddeee91348db77232",
+      "gold": "2019-03-15",
+      "predicted_ordinal": 737418,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_e069b100b88da9497aadfa1f",
+          "date": "2019-03-15"
+        },
+        {
+          "corpus_id": "wcep_f8db92d778418c7ff5a73198",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_f8db92d778418c7ff5a73198",
+      "event": "evt_636685eddeee91348db77232",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737133,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c7872c1964c30af2df3fec0d",
+          "date": "2019-03-15"
+        },
+        {
+          "corpus_id": "wcep_e069b100b88da9497aadfa1f",
+          "date": "2019-03-15"
+        }
+      ]
+    },
+    {
+      "id": "wcep_e069b100b88da9497aadfa1f",
+      "event": "evt_636685eddeee91348db77232",
+      "gold": "2019-03-15",
+      "predicted_ordinal": 737132,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c7872c1964c30af2df3fec0d",
+          "date": "2019-03-15"
+        },
+        {
+          "corpus_id": "wcep_657653b6c3b025937aef4c16",
+          "date": "2019-03-14"
+        }
+      ]
+    },
+    {
+      "id": "wcep_657653b6c3b025937aef4c16",
+      "event": "evt_636685eddeee91348db77232",
+      "gold": "2019-03-14",
+      "predicted_ordinal": 737133,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c7872c1964c30af2df3fec0d",
+          "date": "2019-03-15"
+        },
+        {
+          "corpus_id": "wcep_e069b100b88da9497aadfa1f",
+          "date": "2019-03-15"
+        }
+      ]
+    },
+    {
+      "id": "wcep_f094fba8b348ecd92552807f",
+      "event": "evt_7a5ad54de4b34e39a6a80260",
+      "gold": "2019-01-31",
+      "predicted_ordinal": 737397,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_7b316307bff11e57514f2b21",
+          "date": "2019-01-31"
+        },
+        {
+          "corpus_id": "wcep_512ced30b061d9b5a49e43e7",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_512ced30b061d9b5a49e43e7",
+      "event": "evt_7a5ad54de4b34e39a6a80260",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737090,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_bd9bef2ab93a6f0066876511",
+          "date": "2019-01-31"
+        },
+        {
+          "corpus_id": "wcep_7b316307bff11e57514f2b21",
+          "date": "2019-01-31"
+        }
+      ]
+    },
+    {
+      "id": "wcep_bd9bef2ab93a6f0066876511",
+      "event": "evt_7a5ad54de4b34e39a6a80260",
+      "gold": "2019-01-31",
+      "predicted_ordinal": 737397,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_512ced30b061d9b5a49e43e7",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_7b316307bff11e57514f2b21",
+          "date": "2019-01-31"
+        }
+      ]
+    },
+    {
+      "id": "wcep_7b316307bff11e57514f2b21",
+      "event": "evt_7a5ad54de4b34e39a6a80260",
+      "gold": "2019-01-31",
+      "predicted_ordinal": 737397,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_512ced30b061d9b5a49e43e7",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_bd9bef2ab93a6f0066876511",
+          "date": "2019-01-31"
+        }
+      ]
+    },
+    {
+      "id": "wcep_7c15fc2c003af78d50ee4b7b",
+      "event": "evt_db358bd4c11342dfe77cb402",
+      "gold": "2019-04-11",
+      "predicted_ordinal": 737432,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a32475c868f7838f0518b7a4",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_2688906a06e244218e4799d8",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a32475c868f7838f0518b7a4",
+      "event": "evt_db358bd4c11342dfe77cb402",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737432,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_2688906a06e244218e4799d8",
+          "date": "2019-04-11"
+        },
+        {
+          "corpus_id": "wcep_4e7a23292f69f35f56b468a6",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_4e7a23292f69f35f56b468a6",
+      "event": "evt_db358bd4c11342dfe77cb402",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737432,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a32475c868f7838f0518b7a4",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_2688906a06e244218e4799d8",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_2688906a06e244218e4799d8",
+      "event": "evt_db358bd4c11342dfe77cb402",
+      "gold": "2019-04-11",
+      "predicted_ordinal": 737432,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a32475c868f7838f0518b7a4",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_7c15fc2c003af78d50ee4b7b",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_adf573b6f19b91c885b47776",
+      "event": "evt_265f10e1bf87701b7aa597c1",
+      "gold": "2019-04-23",
+      "predicted_ordinal": 737172,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_ba8456c75a4a18af84a86ef9",
+          "date": "2019-04-24"
+        },
+        {
+          "corpus_id": "wcep_a8ed0c15fabb1bdff891016a",
+          "date": "2019-04-23"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a8ed0c15fabb1bdff891016a",
+      "event": "evt_265f10e1bf87701b7aa597c1",
+      "gold": "2019-04-23",
+      "predicted_ordinal": 737172,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_ba8456c75a4a18af84a86ef9",
+          "date": "2019-04-24"
+        },
+        {
+          "corpus_id": "wcep_adf573b6f19b91c885b47776",
+          "date": "2019-04-23"
+        }
+      ]
+    },
+    {
+      "id": "wcep_4ddf3c1054afd9aaccb7be10",
+      "event": "evt_265f10e1bf87701b7aa597c1",
+      "gold": "2019-04-22",
+      "predicted_ordinal": 737172,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_adf573b6f19b91c885b47776",
+          "date": "2019-04-23"
+        },
+        {
+          "corpus_id": "wcep_ba8456c75a4a18af84a86ef9",
+          "date": "2019-04-24"
+        }
+      ]
+    },
+    {
+      "id": "wcep_ba8456c75a4a18af84a86ef9",
+      "event": "evt_265f10e1bf87701b7aa597c1",
+      "gold": "2019-04-24",
+      "predicted_ordinal": 737172,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_adf573b6f19b91c885b47776",
+          "date": "2019-04-23"
+        },
+        {
+          "corpus_id": "wcep_a8ed0c15fabb1bdff891016a",
+          "date": "2019-04-23"
+        }
+      ]
+    },
+    {
+      "id": "wcep_b2c1df64b74fb30b9bb00acd",
+      "event": "evt_53f096d46b673cf7a5299c22",
+      "gold": "2019-01-29",
+      "predicted_ordinal": 737087,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_079120e344ea0c73ccfed231",
+          "date": "2019-01-28"
+        },
+        {
+          "corpus_id": "wcep_6996add3b768a556ebaf800d",
+          "date": "2019-01-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_2f93e3abcd5fea034c019133",
+      "event": "evt_53f096d46b673cf7a5299c22",
+      "gold": "2019-01-28",
+      "predicted_ordinal": 737088,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_b2c1df64b74fb30b9bb00acd",
+          "date": "2019-01-29"
+        },
+        {
+          "corpus_id": "wcep_6996add3b768a556ebaf800d",
+          "date": "2019-01-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_079120e344ea0c73ccfed231",
+      "event": "evt_53f096d46b673cf7a5299c22",
+      "gold": "2019-01-28",
+      "predicted_ordinal": 737087,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_2f93e3abcd5fea034c019133",
+          "date": "2019-01-28"
+        },
+        {
+          "corpus_id": "wcep_6996add3b768a556ebaf800d",
+          "date": "2019-01-29"
+        }
+      ]
+    },
+    {
+      "id": "wcep_6996add3b768a556ebaf800d",
+      "event": "evt_53f096d46b673cf7a5299c22",
+      "gold": "2019-01-29",
+      "predicted_ordinal": 737087,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_b2c1df64b74fb30b9bb00acd",
+          "date": "2019-01-29"
+        },
+        {
+          "corpus_id": "wcep_079120e344ea0c73ccfed231",
+          "date": "2019-01-28"
+        }
+      ]
+    },
+    {
+      "id": "wcep_2361534a82f85af27be94bb9",
+      "event": "evt_e7f599391ca82c7815a0fbac",
+      "gold": "2019-04-05",
+      "predicted_ordinal": 737429,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_e1a7f20e8f413314da261703",
+          "date": "2019-04-06"
+        },
+        {
+          "corpus_id": "wcep_ba592673ba36d3d203299cd0",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_cd793293732d74d6cba5b373",
+      "event": "evt_e7f599391ca82c7815a0fbac",
+      "gold": "2019-04-05",
+      "predicted_ordinal": 737429,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_ba592673ba36d3d203299cd0",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_2361534a82f85af27be94bb9",
+          "date": "2019-04-05"
+        }
+      ]
+    },
+    {
+      "id": "wcep_e1a7f20e8f413314da261703",
+      "event": "evt_e7f599391ca82c7815a0fbac",
+      "gold": "2019-04-06",
+      "predicted_ordinal": 737429,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_2361534a82f85af27be94bb9",
+          "date": "2019-04-05"
+        },
+        {
+          "corpus_id": "wcep_ba592673ba36d3d203299cd0",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_ba592673ba36d3d203299cd0",
+      "event": "evt_e7f599391ca82c7815a0fbac",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737154,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_2361534a82f85af27be94bb9",
+          "date": "2019-04-05"
+        },
+        {
+          "corpus_id": "wcep_e1a7f20e8f413314da261703",
+          "date": "2019-04-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a0b679c7e96679d52d51f17e",
+      "event": "evt_5819c61d09172afa9691e7af",
+      "gold": "2019-02-14",
+      "predicted_ordinal": 737404,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_e8872527adb23799a4b87995",
+          "date": "2019-02-14"
+        },
+        {
+          "corpus_id": "wcep_68367725a773f1bb76b35a81",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d393cf93ed8be4f0e58354d3",
+      "event": "evt_5819c61d09172afa9691e7af",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737104,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a0b679c7e96679d52d51f17e",
+          "date": "2019-02-14"
+        },
+        {
+          "corpus_id": "wcep_e8872527adb23799a4b87995",
+          "date": "2019-02-14"
+        }
+      ]
+    },
+    {
+      "id": "wcep_e8872527adb23799a4b87995",
+      "event": "evt_5819c61d09172afa9691e7af",
+      "gold": "2019-02-14",
+      "predicted_ordinal": 737404,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a0b679c7e96679d52d51f17e",
+          "date": "2019-02-14"
+        },
+        {
+          "corpus_id": "wcep_68367725a773f1bb76b35a81",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_5328ec707585cac307ee81d6",
+      "event": "evt_98921ff9d8005d71819e4dd3",
+      "gold": "2019-04-11",
+      "predicted_ordinal": 737160,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_489c762ce4b163d99b286817",
+          "date": "2019-04-11"
+        },
+        {
+          "corpus_id": "wcep_f6f0935327d54ac1575a348e",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_489c762ce4b163d99b286817",
+      "event": "evt_98921ff9d8005d71819e4dd3",
+      "gold": "2019-04-11",
+      "predicted_ordinal": 737160,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_f6f0935327d54ac1575a348e",
+          "date": "2019-04-11"
+        },
+        {
+          "corpus_id": "wcep_5328ec707585cac307ee81d6",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_f6f0935327d54ac1575a348e",
+      "event": "evt_98921ff9d8005d71819e4dd3",
+      "gold": "2019-04-11",
+      "predicted_ordinal": 737160,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_489c762ce4b163d99b286817",
+          "date": "2019-04-11"
+        },
+        {
+          "corpus_id": "wcep_5328ec707585cac307ee81d6",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d255b0fc6fe77e96c8d096f2",
+      "event": "evt_98921ff9d8005d71819e4dd3",
+      "gold": "2019-04-12",
+      "predicted_ordinal": 737160,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_5328ec707585cac307ee81d6",
+          "date": "2019-04-11"
+        },
+        {
+          "corpus_id": "wcep_489c762ce4b163d99b286817",
+          "date": "2019-04-11"
+        }
+      ]
+    },
+    {
+      "id": "wcep_9aa475354e436bdd1612fa17",
+      "event": "evt_3dc372591c5c934a06a25eec",
+      "gold": "2019-02-20",
+      "predicted_ordinal": 737110,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_24d0f2f95be5080d5390173e",
+          "date": "2019-02-20"
+        },
+        {
+          "corpus_id": "wcep_8554a67ae42f5e1003c386eb",
+          "date": "2019-02-20"
+        }
+      ]
+    },
+    {
+      "id": "wcep_24d0f2f95be5080d5390173e",
+      "event": "evt_3dc372591c5c934a06a25eec",
+      "gold": "2019-02-20",
+      "predicted_ordinal": 737110,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_9aa475354e436bdd1612fa17",
+          "date": "2019-02-20"
+        },
+        {
+          "corpus_id": "wcep_8554a67ae42f5e1003c386eb",
+          "date": "2019-02-20"
+        }
+      ]
+    },
+    {
+      "id": "wcep_ce52a9d693bfb792dcd19053",
+      "event": "evt_3dc372591c5c934a06a25eec",
+      "gold": "2019-02-20",
+      "predicted_ordinal": 737110,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_9aa475354e436bdd1612fa17",
+          "date": "2019-02-20"
+        },
+        {
+          "corpus_id": "wcep_8554a67ae42f5e1003c386eb",
+          "date": "2019-02-20"
+        }
+      ]
+    },
+    {
+      "id": "wcep_8554a67ae42f5e1003c386eb",
+      "event": "evt_3dc372591c5c934a06a25eec",
+      "gold": "2019-02-20",
+      "predicted_ordinal": 737110,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_24d0f2f95be5080d5390173e",
+          "date": "2019-02-20"
+        },
+        {
+          "corpus_id": "wcep_ce52a9d693bfb792dcd19053",
+          "date": "2019-02-20"
+        }
+      ]
+    },
+    {
+      "id": "wcep_66ada901d682f6382124a2aa",
+      "event": "evt_95e5cb154301f8440c0a3635",
+      "gold": "2019-01-16",
+      "predicted_ordinal": 737389,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_e083c2844fdb447b0deba2ea",
+          "date": "2019-01-15"
+        },
+        {
+          "corpus_id": "wcep_cb705390a3a2c82939917b45",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d18cc57b3a92163e40023caa",
+      "event": "evt_95e5cb154301f8440c0a3635",
+      "gold": "2019-01-15",
+      "predicted_ordinal": 737389,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_cb705390a3a2c82939917b45",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_e083c2844fdb447b0deba2ea",
+          "date": "2019-01-15"
+        }
+      ]
+    },
+    {
+      "id": "wcep_cb705390a3a2c82939917b45",
+      "event": "evt_95e5cb154301f8440c0a3635",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737074,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d18cc57b3a92163e40023caa",
+          "date": "2019-01-15"
+        },
+        {
+          "corpus_id": "wcep_e083c2844fdb447b0deba2ea",
+          "date": "2019-01-15"
+        }
+      ]
+    },
+    {
+      "id": "wcep_e083c2844fdb447b0deba2ea",
+      "event": "evt_95e5cb154301f8440c0a3635",
+      "gold": "2019-01-15",
+      "predicted_ordinal": 737389,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d18cc57b3a92163e40023caa",
+          "date": "2019-01-15"
+        },
+        {
+          "corpus_id": "wcep_cb705390a3a2c82939917b45",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_9a791d75d0edea9471e195a0",
+      "event": "evt_4c27501dc107c368bb3daad1",
+      "gold": "2019-02-14",
+      "predicted_ordinal": 737113,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_346a14cbc9e599181c6c2681",
+          "date": "2019-03-10"
+        },
+        {
+          "corpus_id": "wcep_bbc5911d83810db82e4e775c",
+          "date": "2019-02-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_18acd5dc3371979e9703cdeb",
+      "event": "evt_4c27501dc107c368bb3daad1",
+      "gold": "2019-02-15",
+      "predicted_ordinal": 737104,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_9a791d75d0edea9471e195a0",
+          "date": "2019-02-14"
+        },
+        {
+          "corpus_id": "wcep_02c560e8d0c92091c3851d2a",
+          "date": "2019-02-15"
+        }
+      ]
+    },
+    {
+      "id": "wcep_c24d383e491826970dfde649",
+      "event": "evt_4c27501dc107c368bb3daad1",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737111,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_90a615cefb3421729b0af5b6",
+          "date": "2019-03-06"
+        },
+        {
+          "corpus_id": "wcep_6acc69cdde869c2cf8615ca9",
+          "date": "2019-02-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_02c560e8d0c92091c3851d2a",
+      "event": "evt_4c27501dc107c368bb3daad1",
+      "gold": "2019-02-15",
+      "predicted_ordinal": 737098,
+      "same_event_in_topk": false,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_6acc69cdde869c2cf8615ca9",
+          "date": "2019-02-08"
+        },
+        {
+          "corpus_id": "wcep_424823e45fe59d2731e7728b",
+          "date": "2019-02-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_c850c18b49eedfd6066b67c1",
+      "event": "evt_ffafef17fe9060d48aab6f42",
+      "gold": "2019-05-02",
+      "predicted_ordinal": 737442,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_8e227c2031e122b85217aa70",
+          "date": "2019-05-02"
+        },
+        {
+          "corpus_id": "wcep_22e0df4ee2f9be01f2986fcb",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_22e0df4ee2f9be01f2986fcb",
+      "event": "evt_ffafef17fe9060d48aab6f42",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737181,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_3d2d9590d9e3555e3c95fa47",
+          "date": "2019-05-02"
+        },
+        {
+          "corpus_id": "wcep_8e227c2031e122b85217aa70",
+          "date": "2019-05-02"
+        }
+      ]
+    },
+    {
+      "id": "wcep_3d2d9590d9e3555e3c95fa47",
+      "event": "evt_ffafef17fe9060d48aab6f42",
+      "gold": "2019-05-02",
+      "predicted_ordinal": 737442,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_22e0df4ee2f9be01f2986fcb",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_8e227c2031e122b85217aa70",
+          "date": "2019-05-02"
+        }
+      ]
+    },
+    {
+      "id": "wcep_8e227c2031e122b85217aa70",
+      "event": "evt_ffafef17fe9060d48aab6f42",
+      "gold": "2019-05-02",
+      "predicted_ordinal": 737442,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c850c18b49eedfd6066b67c1",
+          "date": "2019-05-02"
+        },
+        {
+          "corpus_id": "wcep_22e0df4ee2f9be01f2986fcb",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_88c12cb764b62877b5f5cdfa",
+      "event": "evt_d90cc57b02a6a936e735a760",
+      "gold": "2019-03-20",
+      "predicted_ordinal": 737138,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_39d8c3b3b67d8f19e903ff93",
+          "date": "2019-03-21"
+        },
+        {
+          "corpus_id": "wcep_58e5811391d893c4b0e5435e",
+          "date": "2019-03-19"
+        }
+      ]
+    },
+    {
+      "id": "wcep_2c5b262a60b4b7f9a78f8137",
+      "event": "evt_d90cc57b02a6a936e735a760",
+      "gold": "2019-03-20",
+      "predicted_ordinal": 737138,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_88c12cb764b62877b5f5cdfa",
+          "date": "2019-03-20"
+        },
+        {
+          "corpus_id": "wcep_39d8c3b3b67d8f19e903ff93",
+          "date": "2019-03-21"
+        }
+      ]
+    },
+    {
+      "id": "wcep_39d8c3b3b67d8f19e903ff93",
+      "event": "evt_d90cc57b02a6a936e735a760",
+      "gold": "2019-03-21",
+      "predicted_ordinal": 737137,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_58e5811391d893c4b0e5435e",
+          "date": "2019-03-19"
+        },
+        {
+          "corpus_id": "wcep_88c12cb764b62877b5f5cdfa",
+          "date": "2019-03-20"
+        }
+      ]
+    },
+    {
+      "id": "wcep_58e5811391d893c4b0e5435e",
+      "event": "evt_d90cc57b02a6a936e735a760",
+      "gold": "2019-03-19",
+      "predicted_ordinal": 737138,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_39d8c3b3b67d8f19e903ff93",
+          "date": "2019-03-21"
+        },
+        {
+          "corpus_id": "wcep_88c12cb764b62877b5f5cdfa",
+          "date": "2019-03-20"
+        }
+      ]
+    },
+    {
+      "id": "wcep_89fc41cfe9004c68d3cc8105",
+      "event": "evt_0761ccbcc7c5b174bec340d3",
+      "gold": "2019-05-07",
+      "predicted_ordinal": 737186,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_28a52c71560fc77f2e337b0b",
+          "date": "2019-05-07"
+        },
+        {
+          "corpus_id": "wcep_0da2e6e4fe6ee5359746989f",
+          "date": "2019-05-07"
+        }
+      ]
+    },
+    {
+      "id": "wcep_0da2e6e4fe6ee5359746989f",
+      "event": "evt_0761ccbcc7c5b174bec340d3",
+      "gold": "2019-05-07",
+      "predicted_ordinal": 737186,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_89fc41cfe9004c68d3cc8105",
+          "date": "2019-05-07"
+        },
+        {
+          "corpus_id": "wcep_28a52c71560fc77f2e337b0b",
+          "date": "2019-05-07"
+        }
+      ]
+    },
+    {
+      "id": "wcep_b37179dde12a1d34d210db2c",
+      "event": "evt_0761ccbcc7c5b174bec340d3",
+      "gold": "2019-05-07",
+      "predicted_ordinal": 737186,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_89fc41cfe9004c68d3cc8105",
+          "date": "2019-05-07"
+        },
+        {
+          "corpus_id": "wcep_28a52c71560fc77f2e337b0b",
+          "date": "2019-05-07"
+        }
+      ]
+    },
+    {
+      "id": "wcep_28a52c71560fc77f2e337b0b",
+      "event": "evt_0761ccbcc7c5b174bec340d3",
+      "gold": "2019-05-07",
+      "predicted_ordinal": 737186,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_89fc41cfe9004c68d3cc8105",
+          "date": "2019-05-07"
+        },
+        {
+          "corpus_id": "wcep_0da2e6e4fe6ee5359746989f",
+          "date": "2019-05-07"
+        }
+      ]
+    },
+    {
+      "id": "wcep_9b89bfb9d80104d0b20dca4a",
+      "event": "evt_d839bcc753c41d17d64da989",
+      "gold": "2019-03-29",
+      "predicted_ordinal": 737426,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a6adca1a777043655428a1e2",
+          "date": "2019-03-30"
+        },
+        {
+          "corpus_id": "wcep_c82e36b9f1043817dd0ef69e",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_a6adca1a777043655428a1e2",
+      "event": "evt_d839bcc753c41d17d64da989",
+      "gold": "2019-03-30",
+      "predicted_ordinal": 737425,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_9b89bfb9d80104d0b20dca4a",
+          "date": "2019-03-29"
+        },
+        {
+          "corpus_id": "wcep_c82e36b9f1043817dd0ef69e",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_c82e36b9f1043817dd0ef69e",
+      "event": "evt_d839bcc753c41d17d64da989",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737148,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_a6adca1a777043655428a1e2",
+          "date": "2019-03-30"
+        },
+        {
+          "corpus_id": "wcep_7ebaa2d626ab2609a90faf13",
+          "date": "2019-03-31"
+        }
+      ]
+    },
+    {
+      "id": "wcep_7ebaa2d626ab2609a90faf13",
+      "event": "evt_d839bcc753c41d17d64da989",
+      "gold": "2019-03-31",
+      "predicted_ordinal": 737426,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_c82e36b9f1043817dd0ef69e",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_a6adca1a777043655428a1e2",
+          "date": "2019-03-30"
+        }
+      ]
+    },
+    {
+      "id": "wcep_96df0c0dba7a1967f775b041",
+      "event": "evt_807fd98e48d2292d8bde1d50",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737067,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_0537c76d955db4e605ff7c74",
+          "date": "2019-01-08"
+        },
+        {
+          "corpus_id": "wcep_111461aa1cb76d5396036a6d",
+          "date": "2019-01-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_0537c76d955db4e605ff7c74",
+      "event": "evt_807fd98e48d2292d8bde1d50",
+      "gold": "2019-01-08",
+      "predicted_ordinal": 737067,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_111461aa1cb76d5396036a6d",
+          "date": "2019-01-08"
+        },
+        {
+          "corpus_id": "wcep_469353ac85bf52bb28362bc0",
+          "date": "2019-01-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_469353ac85bf52bb28362bc0",
+      "event": "evt_807fd98e48d2292d8bde1d50",
+      "gold": "2019-01-08",
+      "predicted_ordinal": 737067,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_111461aa1cb76d5396036a6d",
+          "date": "2019-01-08"
+        },
+        {
+          "corpus_id": "wcep_0537c76d955db4e605ff7c74",
+          "date": "2019-01-08"
+        }
+      ]
+    },
+    {
+      "id": "wcep_111461aa1cb76d5396036a6d",
+      "event": "evt_807fd98e48d2292d8bde1d50",
+      "gold": "2019-01-08",
+      "predicted_ordinal": 737385,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_469353ac85bf52bb28362bc0",
+          "date": "2019-01-08"
+        },
+        {
+          "corpus_id": "wcep_96df0c0dba7a1967f775b041",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_6bf7cae75a6e252d0a873af7",
+      "event": "evt_72f287dd61170cc917f47c83",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737704,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d0a54eaccff122b89c1b2ce9",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_5d0f8fd1ca764b68d1356953",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d0a54eaccff122b89c1b2ce9",
+      "event": "evt_72f287dd61170cc917f47c83",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737435,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_5d0f8fd1ca764b68d1356953",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_fa2ccf7df7598e54dc64f4e8",
+          "date": "2019-04-17"
+        }
+      ]
+    },
+    {
+      "id": "wcep_5d0f8fd1ca764b68d1356953",
+      "event": "evt_72f287dd61170cc917f47c83",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737435,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_fa2ccf7df7598e54dc64f4e8",
+          "date": "2019-04-17"
+        },
+        {
+          "corpus_id": "wcep_6bf7cae75a6e252d0a873af7",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_fa2ccf7df7598e54dc64f4e8",
+      "event": "evt_72f287dd61170cc917f47c83",
+      "gold": "2019-04-17",
+      "predicted_ordinal": 737704,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_6bf7cae75a6e252d0a873af7",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_5d0f8fd1ca764b68d1356953",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_6bfc47afe8c4294de3e4dbf6",
+      "event": "evt_0b6bb22d997e2e7e717c5400",
+      "gold": "2019-01-15",
+      "predicted_ordinal": 737074,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_3abd5e1804db464ef920dbef",
+          "date": "2019-01-15"
+        },
+        {
+          "corpus_id": "wcep_fd75394cbb7698c17e309604",
+          "date": "2019-01-15"
+        }
+      ]
+    },
+    {
+      "id": "wcep_f07debe31db1084cd460a945",
+      "event": "evt_0b6bb22d997e2e7e717c5400",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737074,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_3abd5e1804db464ef920dbef",
+          "date": "2019-01-15"
+        },
+        {
+          "corpus_id": "wcep_fd75394cbb7698c17e309604",
+          "date": "2019-01-15"
+        }
+      ]
+    },
+    {
+      "id": "wcep_3abd5e1804db464ef920dbef",
+      "event": "evt_0b6bb22d997e2e7e717c5400",
+      "gold": "2019-01-15",
+      "predicted_ordinal": 737074,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_6bfc47afe8c4294de3e4dbf6",
+          "date": "2019-01-15"
+        },
+        {
+          "corpus_id": "wcep_fd75394cbb7698c17e309604",
+          "date": "2019-01-15"
+        }
+      ]
+    },
+    {
+      "id": "wcep_fd75394cbb7698c17e309604",
+      "event": "evt_0b6bb22d997e2e7e717c5400",
+      "gold": "2019-01-15",
+      "predicted_ordinal": 737074,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_6bfc47afe8c4294de3e4dbf6",
+          "date": "2019-01-15"
+        },
+        {
+          "corpus_id": "wcep_3abd5e1804db464ef920dbef",
+          "date": "2019-01-15"
+        }
+      ]
+    },
+    {
+      "id": "wcep_d2a97090fb0384a4584904fa",
+      "event": "evt_ba54e8cd4b3e5373622db094",
+      "gold": "2019-01-21",
+      "predicted_ordinal": 737392,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_e1fd582370ccd1d5a510de76",
+          "date": "2019-01-22"
+        },
+        {
+          "corpus_id": "wcep_68367725a773f1bb76b35a81",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_e1fd582370ccd1d5a510de76",
+      "event": "evt_ba54e8cd4b3e5373622db094",
+      "gold": "2019-01-22",
+      "predicted_ordinal": 737392,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d2a97090fb0384a4584904fa",
+          "date": "2019-01-21"
+        },
+        {
+          "corpus_id": "wcep_68367725a773f1bb76b35a81",
+          "date": "2020-10-06"
+        }
+      ]
+    },
+    {
+      "id": "wcep_68367725a773f1bb76b35a81",
+      "event": "evt_ba54e8cd4b3e5373622db094",
+      "gold": "2020-10-06",
+      "predicted_ordinal": 737080,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_d2a97090fb0384a4584904fa",
+          "date": "2019-01-21"
+        },
+        {
+          "corpus_id": "wcep_9301c14331c634584a4baaf9",
+          "date": "2019-01-21"
+        }
+      ]
+    },
+    {
+      "id": "wcep_9301c14331c634584a4baaf9",
+      "event": "evt_ba54e8cd4b3e5373622db094",
+      "gold": "2019-01-21",
+      "predicted_ordinal": 737392,
+      "same_event_in_topk": true,
+      "retrieved": [
+        {
+          "corpus_id": "wcep_68367725a773f1bb76b35a81",
+          "date": "2020-10-06"
+        },
+        {
+          "corpus_id": "wcep_d2a97090fb0384a4584904fa",
+          "date": "2019-01-21"
+        }
+      ]
+    }
+  ],
+  "articles": 199,
+  "index": "/root/paddlejob/workspace/env_run/ljw/timeagent/timeagent_revision_v2/data/custom/wcep_pilot_v1/index.sqlite",
+  "backend_id": "local-sqlite-fts5-sha256:44dd6ed4b0eeb94f0ef7ca4ef5e630c732b2a9c8e690b4ebc2f5d77a8bf527bc",
+  "topk": 3
+}

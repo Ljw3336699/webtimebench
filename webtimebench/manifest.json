@@ -1,0 +1,332 @@
+{
+  "version": "timeagent_revision_v2.1",
+  "seed": 20261103,
+  "dev_fraction": 0.05,
+  "normalization": "first prompt content after first Content:; Unicode NFKC; lowercase; collapse whitespace; strip",
+  "input_files": {
+    "source/train_data4.json": {
+      "sha256": "6584438ce4edd3a441ec36e63fe7f77348d1cb062a15db684371299afd971fd7",
+      "records": 20000
+    },
+    "source/test_data4.json": {
+      "sha256": "d679bda96cf4d1e3ae06b8d61e4076e0541fc1db40c6dbef07a3b04193f0558b",
+      "records": 3000
+    }
+  },
+  "output_files": {
+    "clean/train.json": {
+      "sha256": "6c0605316fadb8cfad78f63aba7f41ab206fd9f1cf6f52e59fb514840389ced6",
+      "bytes": 81467126
+    },
+    "clean/train.parquet": {
+      "sha256": "5a54f2bbade2d18af9a6700d6406c77dd6905b7108c55db9dcc8b39d882eb4bd",
+      "bytes": 29096549
+    },
+    "clean/dev.json": {
+      "sha256": "161c73e115a026edeb1be9ae4fe9cf407d2a3a5c5dfcb5cbffe3288f91243daf",
+      "bytes": 4313913
+    },
+    "clean/dev.parquet": {
+      "sha256": "f31d71133996688db77fd469630c0f50280620fdbd7a070ae03e67767a012250",
+      "bytes": 1544190
+    },
+    "clean/test.json": {
+      "sha256": "ec1c9f9d9cbc3933d02c493155cfc5e4bfaa555f36b9e54f9ac2c777a18fa198",
+      "bytes": 13505745
+    },
+    "clean/test.parquet": {
+      "sha256": "7e4ba0e513d2e2c3528a89925673d2fa19f361828956ff4e64de296fd1277394",
+      "bytes": 4860807
+    },
+    "temporal/train.json": {
+      "sha256": "9bc77eda532c78e9f8cde4d668dec1cc7014eb1337b7e52a4291bfee61b9aab9",
+      "bytes": 40873614
+    },
+    "temporal/train.parquet": {
+      "sha256": "44a4a551f0487aed270a2df8369731275c7e1e63252ceb7e29ba251b3a0a2ae8",
+      "bytes": 14331114
+    },
+    "temporal/dev.json": {
+      "sha256": "79befa6d49a66c432a62b36c9d25f355fd0b5c61a252bfbc7279a1bc6dd6f847",
+      "bytes": 2109956
+    },
+    "temporal/dev.parquet": {
+      "sha256": "342c4e4c571a0912eeebccd066d672072c63d1f96c288a2a72ae451113679ba8",
+      "bytes": 732873
+    },
+    "temporal/test.json": {
+      "sha256": "9968daa0ad1b06910da5060c22e89d8fafc0f9cb5774d3a6cb8df0560fb41f82",
+      "bytes": 6968544
+    },
+    "temporal/test.parquet": {
+      "sha256": "421df8d01c0f3ad3a91c859013e108a461771d5020f7813c649052bfe640930f",
+      "bytes": 2523500
+    },
+    "quarantine/records.jsonl": {
+      "sha256": "0d9f5e24b1f88454277fa63ed6a780f98635cab2c4e0d9079f2ad4d25b2bd828",
+      "bytes": 2118409
+    },
+    "excluded/records.jsonl": {
+      "sha256": "e40928a8984a76497256049c7327ea09ef09c119a594dddcd6a40bc2df25e734",
+      "bytes": 5164793
+    },
+    "id_mapping.json": {
+      "sha256": "415ce0c095b68d690affa653d397caf4c1b9646d758c8847429b18103b5ca499",
+      "bytes": 6591503
+    }
+  },
+  "parquet_written": true,
+  "split_summary": {
+    "clean": {
+      "train": {
+        "records": 17557,
+        "regimes": {
+          "IMP": 8578,
+          "EXP": 3735,
+          "DIS": 5244
+        },
+        "years": {
+          "1994": 2,
+          "1995": 3,
+          "1996": 3,
+          "1997": 2,
+          "1998": 7,
+          "1999": 9,
+          "2000": 6,
+          "2001": 62,
+          "2002": 50,
+          "2003": 48,
+          "2004": 53,
+          "2005": 42,
+          "2006": 65,
+          "2007": 60,
+          "2008": 73,
+          "2009": 122,
+          "2010": 149,
+          "2011": 162,
+          "2012": 133,
+          "2013": 142,
+          "2014": 148,
+          "2015": 203,
+          "2016": 227,
+          "2017": 330,
+          "2018": 596,
+          "2019": 864,
+          "2020": 975,
+          "2021": 1055,
+          "2022": 1422,
+          "2023": 2074,
+          "2024": 2775,
+          "2025": 5695
+        },
+        "date_range": [
+          "1994-01-31",
+          "2025-12-19"
+        ]
+      },
+      "dev": {
+        "records": 923,
+        "regimes": {
+          "IMP": 451,
+          "DIS": 276,
+          "EXP": 196
+        },
+        "years": {
+          "1998": 2,
+          "2000": 2,
+          "2001": 4,
+          "2004": 3,
+          "2006": 5,
+          "2007": 5,
+          "2008": 2,
+          "2009": 2,
+          "2010": 5,
+          "2011": 5,
+          "2012": 16,
+          "2013": 4,
+          "2014": 4,
+          "2015": 8,
+          "2016": 14,
+          "2017": 11,
+          "2018": 31,
+          "2019": 39,
+          "2020": 60,
+          "2021": 60,
+          "2022": 73,
+          "2023": 116,
+          "2024": 151,
+          "2025": 301
+        },
+        "date_range": [
+          "1998-04-21",
+          "2025-12-19"
+        ]
+      },
+      "test": {
+        "records": 2894,
+        "regimes": {
+          "IMP": 941,
+          "EXP": 992,
+          "DIS": 961
+        },
+        "years": {
+          "1994": 1,
+          "1999": 3,
+          "2000": 2,
+          "2001": 14,
+          "2002": 5,
+          "2003": 7,
+          "2004": 8,
+          "2005": 16,
+          "2006": 4,
+          "2007": 10,
+          "2008": 15,
+          "2009": 26,
+          "2010": 14,
+          "2011": 20,
+          "2012": 30,
+          "2013": 24,
+          "2014": 26,
+          "2015": 40,
+          "2016": 44,
+          "2017": 48,
+          "2018": 94,
+          "2019": 133,
+          "2020": 160,
+          "2021": 139,
+          "2022": 238,
+          "2023": 325,
+          "2024": 503,
+          "2025": 945
+        },
+        "date_range": [
+          "1994-03-31",
+          "2025-12-19"
+        ]
+      }
+    },
+    "temporal": {
+      "train": {
+        "records": 9087,
+        "regimes": {
+          "IMP": 4425,
+          "EXP": 1589,
+          "DIS": 3073
+        },
+        "years": {
+          "1994": 2,
+          "1995": 3,
+          "1996": 3,
+          "1997": 2,
+          "1998": 7,
+          "1999": 9,
+          "2000": 6,
+          "2001": 62,
+          "2002": 50,
+          "2003": 48,
+          "2004": 53,
+          "2005": 42,
+          "2006": 65,
+          "2007": 60,
+          "2008": 73,
+          "2009": 122,
+          "2010": 149,
+          "2011": 162,
+          "2012": 133,
+          "2013": 142,
+          "2014": 148,
+          "2015": 203,
+          "2016": 227,
+          "2017": 330,
+          "2018": 596,
+          "2019": 864,
+          "2020": 975,
+          "2021": 1055,
+          "2022": 1422,
+          "2023": 2074
+        },
+        "date_range": [
+          "1994-01-31",
+          "2023-12-31"
+        ]
+      },
+      "dev": {
+        "records": 471,
+        "regimes": {
+          "DIS": 163,
+          "EXP": 80,
+          "IMP": 228
+        },
+        "years": {
+          "1998": 2,
+          "2000": 2,
+          "2001": 4,
+          "2004": 3,
+          "2006": 5,
+          "2007": 5,
+          "2008": 2,
+          "2009": 2,
+          "2010": 5,
+          "2011": 5,
+          "2012": 16,
+          "2013": 4,
+          "2014": 4,
+          "2015": 8,
+          "2016": 14,
+          "2017": 11,
+          "2018": 31,
+          "2019": 39,
+          "2020": 60,
+          "2021": 60,
+          "2022": 73,
+          "2023": 116
+        },
+        "date_range": [
+          "1998-04-21",
+          "2023-12-31"
+        ]
+      },
+      "test": {
+        "records": 1448,
+        "regimes": {
+          "IMP": 495,
+          "EXP": 554,
+          "DIS": 399
+        },
+        "years": {
+          "2024": 503,
+          "2025": 945
+        },
+        "date_range": [
+          "2024-01-03",
+          "2025-12-19"
+        ]
+      }
+    }
+  },
+  "quarantined_records": 583,
+  "excluded_records": 1043,
+  "quarantine_reason_counts": {
+    "conflicting_gold_for_body": 455,
+    "conflicting_regime_for_body": 130,
+    "invalid_gold": 28
+  },
+  "exclusion_reason_counts": {
+    "duplicate_body_same_labels": 497,
+    "train_body_in_original_test": 546
+  },
+  "conflict_group_counts": {
+    "conflicting_gold_for_body": 101,
+    "conflicting_regime_for_body": 32
+  },
+  "guarantees": {
+    "exact_normalized_body_disjoint": true,
+    "original_test_never_in_train_or_dev": true,
+    "source_disjoint_verified": false,
+    "event_disjoint_verified": false,
+    "near_duplicate_disjoint_verified": false,
+    "reference_provenance_verified": false,
+    "requires_retraining": true
+  },
+  "temporal_protocol": "train/dev: corresponding clean split with gold <= 2023-12-31; test: clean test with gold >= 2024-01-01; no original test enters training"
+}
