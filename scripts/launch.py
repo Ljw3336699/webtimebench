@@ -10,8 +10,11 @@ import os
 from pathlib import Path
 import re
 import shlex
+import shutil
 import subprocess
+import threading
 import sys
+import time
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -23,7 +26,9 @@ def parser():
     p.add_argument("--variant", choices=["clean", "temporal"], default="clean")
     p.add_argument("--dataset-dir", type=Path, help="Custom web dataset root containing manifest.json and train/dev/test.parquet")
     p.add_argument("--eval-split", choices=["dev", "test"], default="test", help="Only used in evaluate mode")
-    p.add_argument("--reward", choices=["cost_aware", "continuous", "timeagent", "searchr1"], default="cost_aware")
+    p.add_argument("--reward", choices=["cost_aware", "continuous", "timeagent", "searchr1", "naiverag"], default="cost_aware",
+                   help="naiverag is the forced-retrieval control: retrieve once per document "
+                        "with the Content: query, inject top-k, then answer (100%% search rate)")
     p.add_argument("--quality-scales-days", type=float, nargs="+", default=[7, 30, 365])
     p.add_argument("--quality-weights", type=float, nargs="+", default=[.2, .3, .5])
     p.add_argument("--search-cost", type=float, default=.01)
@@ -50,7 +55,29 @@ def parser():
     p.add_argument("--wandb-mode", choices=["online", "offline", "disabled"], default="offline",
                    help="offline keeps a fully local wandb run dir that can be synced later")
     p.add_argument("--run", action="store_true", help="Execute; without this flag only validate data and print the command")
-    p.add_argument("--code-root", type=Path, help="Code tree to run (default: <repo>/src)")
+    p.add_argument("--save-freq", type=int, default=25,
+                   help="Checkpoint interval in steps; set equal to --steps to write only the final checkpoint")
+    p.add_argument("--test-freq", type=int, default=100, help="Dev-validation interval in steps")
+    p.add_argument("--keep-checkpoints", type=int, default=0,
+                   help="Keep only the N most recent actor checkpoints (0 keeps all). "
+                        "Critic states are dropped unless --keep-critic is set (only needed to resume).")
+    p.add_argument("--keep-critic", action="store_true",
+                   help="Retain critic checkpoints too; they roughly double checkpoint disk use")
+    p.add_argument("--allow-empty-rollout", action="store_true",
+                   help="Score a rollout with no generated tokens as an invalid answer instead of aborting training")
+    p.add_argument("--null-retriever", action="store_true",
+                   help="Keep the search loop but return empty observations (no-evidence control)")
+    p.add_argument("--code-root", type=Path,
+                   help="Directory placed on PYTHONPATH and used as the working directory; "
+                        "defaults to the in-repo src/ tree")
+    p.add_argument("--max-obs-length", type=int, default=2048,
+                   help="Maximum tokens kept per retrieved observation; 2048 is the reproduction default")
+    p.add_argument("--max-prompt-length", type=int, default=16384,
+                   help="Maximum prompt length")
+    p.add_argument("--max-start-length", type=int, default=8192,
+                   help="Maximum initial document length")
+    p.add_argument("--max-response-length", type=int, default=512,
+                   help="Maximum model response length")
     return p
 
 
@@ -84,7 +111,7 @@ def build_command(a, root=ROOT):
     if a.retriever_token_env is not None and not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', a.retriever_token_env):
         raise ValueError("retriever-token-env must name an environment variable")
     if any(x < 1 for x in (a.gpus, a.steps, a.train_batch_size, a.ppo_mini_batch_size,
-                           a.micro_batch_per_gpu, a.val_batch_size)) or a.seed < 0:
+                           a.micro_batch_per_gpu, a.val_batch_size, a.save_freq, a.test_freq)) or a.seed < 0 or a.keep_checkpoints < 0:
         raise ValueError("Batch sizes, gpus and steps must be positive; seed must be nonnegative")
     if not 0 < a.gpu_memory_utilization <= 1:
         raise ValueError("gpu-memory-utilization must be in (0, 1]")
@@ -111,8 +138,8 @@ def build_command(a, root=ROOT):
         "data.val_files": str(data / f"{val_split}.parquet"),
         "data.train_data_num": "null", "data.val_data_num": "null",
         "data.train_batch_size": a.train_batch_size, "data.val_batch_size": a.val_batch_size,
-        "data.max_prompt_length": 16384, "data.max_start_length": 8192,
-        "data.max_response_length": 512, "data.max_obs_length": 2048,
+        "data.max_prompt_length": a.max_prompt_length, "data.max_start_length": a.max_start_length,
+        "data.max_response_length": a.max_response_length, "data.max_obs_length": a.max_obs_length,
         "data.shuffle_train_dataloader": "true",
         "algorithm.adv_estimator": "gae", "algorithm.no_think_rl": "false",
         "algorithm.kl_ctrl.kl_coef": 0.001,
@@ -157,10 +184,10 @@ def build_command(a, root=ROOT):
         "trainer.nnodes": 1, "trainer.critic_warmup": 0, "trainer.total_training_steps": a.steps,
         # Even a one-batch dataset can reach the requested update count.
         # fit() stops exactly at total_training_steps.
-        "trainer.total_epochs": a.steps, "trainer.save_freq": 25,
+        "trainer.total_epochs": a.steps, "trainer.save_freq": a.save_freq,
         # Less frequent validation: each val pass has low GPU utilization windows
         # (short generations + engine wake/sleep) and repeated passes risk idle-reclaim.
-        "trainer.test_freq": 100, "trainer.project_name": "TIME-Agent-v2",
+        "trainer.test_freq": a.test_freq, "trainer.project_name": "TIME-Agent-v2",
         "trainer.experiment_name": name,
         "trainer.default_hdfs_dir": "null", "trainer.default_local_dir": str(out / "checkpoints"),
         "+trainer.dialog_dir": str(out / "predictions"),
@@ -179,6 +206,46 @@ def build_command(a, root=ROOT):
             v = json.dumps(v)
         argv.append(f"{k}={v}")
     return argv, out, val_split
+
+
+def prune_checkpoints(checkpoint_root, keep, keep_critic=False):
+    """Keep the newest N actor checkpoints; critic states are optional (resume only).
+
+    Directories modified within the last 10 minutes are left alone: a checkpoint
+    is written shard by shard, and deleting it mid-write corrupts the run.
+    """
+    checkpoint_root = Path(checkpoint_root)
+    removed = []
+    limits = {"actor": keep, "critic": keep if keep_critic else 0}
+    now = time.time()
+    for role, limit in limits.items():
+        role_dir = checkpoint_root / role
+        if not role_dir.is_dir():
+            continue
+        steps = []
+        for path in role_dir.glob("global_step_*"):
+            suffix = path.name.rsplit("_", 1)[-1]
+            if path.is_dir() and suffix.isdigit():
+                steps.append((int(suffix), path))
+        ordered = sorted(steps)
+        old = ordered if limit == 0 else ordered[:-limit]
+        for _, path in old:
+            try:
+                if now - path.stat().st_mtime < 600:
+                    continue
+            except FileNotFoundError:
+                continue
+            shutil.rmtree(path, ignore_errors=True)
+            removed.append(str(path))
+    return removed
+
+
+def _prune_loop(checkpoint_root, keep, keep_critic, stop, log_path, interval=120):
+    while not stop.wait(interval):
+        removed = prune_checkpoints(checkpoint_root, keep, keep_critic)
+        if removed:
+            with log_path.open("a") as log:
+                log.write(json.dumps({"removed": removed}) + "\n")
 
 
 def main():
@@ -223,6 +290,10 @@ def main():
     env["PYTHONHASHSEED"] = str(a.seed)
     env.setdefault("VLLM_ATTENTION_BACKEND", "XFORMERS")
     env["TIMEAGENT_SEED"] = str(a.seed)
+    if a.allow_empty_rollout:
+        env["TIMEAGENT_ALLOW_EMPTY_ROLLOUT"] = "1"
+    if a.null_retriever:
+        env["TIMEAGENT_NULL_RETRIEVER"] = "1"
     # Keep experiment telemetry on local disk regardless of the chosen tracker:
     # wandb writes a local run dir (offline = fully local, syncable later) and
     # tensorboard event files land under the run output directory.
@@ -233,8 +304,17 @@ def main():
                 "mode": a.mode, "variant": a.variant, "evaluation_split": split,
                 "data_dir": str(data_root), "data_manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest()}
     (out / "launch.json").write_text(json.dumps(manifest, indent=2))
-    with (out / "console.log").open("w") as log:
-        completed = subprocess.run(argv, cwd=code_root, env=env, stdout=log, stderr=subprocess.STDOUT)
+    stop_prune = threading.Event()
+    if a.keep_checkpoints:
+        threading.Thread(target=_prune_loop,
+                         args=(out / "checkpoints", a.keep_checkpoints, a.keep_critic, stop_prune,
+                               out / "prune_checkpoints.jsonl"),
+                         daemon=True).start()
+    try:
+        with (out / "console.log").open("w") as log:
+            completed = subprocess.run(argv, cwd=code_root, env=env, stdout=log, stderr=subprocess.STDOUT)
+    finally:
+        stop_prune.set()
     raise SystemExit(completed.returncode)
 
 

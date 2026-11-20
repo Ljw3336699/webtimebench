@@ -1,4 +1,5 @@
 """TIME-Agent PPO entry: cost-aware date reward with real executed-search accounting."""
+import os
 import re
 import hydra
 import torch
@@ -62,7 +63,10 @@ class RewardManager:
             if not self.eval_mode and len(model_ids) == 0:
                 # An empty rollout has no action to receive its terminal reward.
                 # Silently leaving zeros would erase invalid-answer/call costs.
-                raise ValueError('Training rollout has no model-generated response tokens')
+                # Opt-in runtime switch: score it as an invalid answer instead of
+                # aborting a long run; the invalid penalty and search cost still apply.
+                if os.environ.get('TIMEAGENT_ALLOW_EMPTY_ROLLOUT') != '1':
+                    raise ValueError('Training rollout has no model-generated response tokens')
             model_ids = model_ids.long() if hasattr(model_ids, 'long') else model_ids
             joined = torch.cat((valid_prompt_ids, response_ids))
             joined = joined.long() if hasattr(joined, 'long') else joined

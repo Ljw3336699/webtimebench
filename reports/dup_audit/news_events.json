@@ -1,0 +1,13 @@
+{
+  "events": 49648,
+  "events_with_two_or_more": 49648,
+  "articles": 161122,
+  "same_event_pairs_examined": 336521,
+  "dup_title_pair_rate": 0.9956,
+  "dup_body_pair_rate": 0.491,
+  "same_day_pair_rate": 0.8782,
+  "events_any_dup": 0.9939,
+  "articles_in_dup": 0.9946,
+  "corpus": "WebNewsEvents (automatic title clusters)",
+  "input": "events/news_events/articles.jsonl"
+}

@@ -1,0 +1,47 @@
+{
+  "resource": "WCEP (train vs val+test)",
+  "schema": "wcep",
+  "train_files": [
+    "source/wcep/train.jsonl.gz"
+  ],
+  "test_files": [
+    "source/wcep/val.jsonl.gz",
+    "source/wcep/test.jsonl.gz"
+  ],
+  "within_train": {
+    "headline": {
+      "items": 493918,
+      "items_with_recurring_key": 0.4798,
+      "distinct_keys": 318284
+    },
+    "content": {
+      "items": 493168,
+      "items_with_recurring_key": 0.3251,
+      "distinct_keys": 382689
+    }
+  },
+  "within_test": {
+    "headline": {
+      "items": 155250,
+      "items_with_recurring_key": 0.5835,
+      "distinct_keys": 83053
+    },
+    "content": {
+      "items": 155030,
+      "items_with_recurring_key": 0.436,
+      "distinct_keys": 104561
+    }
+  },
+  "test_in_train": {
+    "headline": {
+      "held_out_items": 155250,
+      "found_in_train": 419,
+      "rate": 0.0027
+    },
+    "content": {
+      "held_out_items": 155030,
+      "found_in_train": 104,
+      "rate": 0.0007
+    }
+  }
+}

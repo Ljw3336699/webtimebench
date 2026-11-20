@@ -1,0 +1,46 @@
+{
+  "resource": "Time-Bench prediction (train vs test)",
+  "schema": "timebench",
+  "train_files": [
+    "source/external/timebench/train_prediction_combined.parquet"
+  ],
+  "test_files": [
+    "source/external/timebench/test_prediction.parquet"
+  ],
+  "within_train": {
+    "headline": {
+      "items": 10810,
+      "items_with_recurring_key": 0.0395,
+      "distinct_keys": 10544
+    },
+    "content": {
+      "items": 10810,
+      "items_with_recurring_key": 0.0,
+      "distinct_keys": 10810
+    }
+  },
+  "within_test": {
+    "headline": {
+      "items": 896,
+      "items_with_recurring_key": 0.0033,
+      "distinct_keys": 894
+    },
+    "content": {
+      "items": 896,
+      "items_with_recurring_key": 0.0,
+      "distinct_keys": 896
+    }
+  },
+  "test_in_train": {
+    "headline": {
+      "held_out_items": 896,
+      "found_in_train": 4,
+      "rate": 0.0045
+    },
+    "content": {
+      "held_out_items": 896,
+      "found_in_train": 0,
+      "rate": 0.0
+    }
+  }
+}

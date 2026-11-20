@@ -1,0 +1,34 @@
+{
+  "resource": "WebTimeBench temporal (train vs test)",
+  "schema": "webtimebench",
+  "train_files": [
+    "webtimebench/temporal/train.json"
+  ],
+  "test_files": [
+    "webtimebench/temporal/test.json"
+  ],
+  "within_train": {
+    "headline": null,
+    "content": {
+      "items": 9087,
+      "items_with_recurring_key": 0.0006,
+      "distinct_keys": 9084
+    }
+  },
+  "within_test": {
+    "headline": null,
+    "content": {
+      "items": 1448,
+      "items_with_recurring_key": 0.0,
+      "distinct_keys": 1448
+    }
+  },
+  "test_in_train": {
+    "headline": null,
+    "content": {
+      "held_out_items": 1448,
+      "found_in_train": 0,
+      "rate": 0.0
+    }
+  }
+}

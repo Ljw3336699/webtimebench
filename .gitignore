@@ -1,0 +1,16 @@
+
+# Local workspace artifacts (not part of the release)
+/src
+/data
+/outputs
+/retrieval
+/paper/build
+/analysis
+/archive
+/baselines
+/paper
+/examples/__pycache__
+__pycache__/
+*.pyc
+*.bak
+*.log

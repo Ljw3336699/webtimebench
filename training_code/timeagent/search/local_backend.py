@@ -12,6 +12,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import random
 import re
 import sqlite3
 import tempfile
@@ -190,7 +191,12 @@ def build_index(corpus, output):
 
 class LocalCorpusBackend:
     """Read-only, version-checked local index compatible with search snapshots."""
-    def __init__(self, index):
+    def __init__(self, index, retrieval="bm25", retrieval_seed=20261103):
+        if retrieval not in ("bm25", "random"):
+            raise ValueError("retrieval must be 'bm25' or 'random'")
+        if type(retrieval_seed) is not int:
+            raise ValueError("retrieval_seed must be an integer")
+        self.retrieval, self.retrieval_seed = retrieval, retrieval_seed
         self.path = Path(index).resolve()
         self.manifest = json.loads(manifest_path(self.path).read_text(encoding="utf-8"))
         if self.manifest.get("schema") != INDEX_SCHEMA or self.manifest.get("tokenizer_version") != TOKENIZER_VERSION:
@@ -198,7 +204,10 @@ class LocalCorpusBackend:
         actual_hash = sha256_file(self.path)
         if actual_hash != self.manifest.get("index_sha256"):
             raise ValueError("Index SHA-256 does not match its manifest")
-        self.backend_id = "local-sqlite-fts5-sha256:" + actual_hash
+        # The control condition belongs to the backend identity, so every snapshot,
+        # report and run manifest records which retrieval produced the evidence.
+        kind = "fts5" if retrieval == "bm25" else "random-control"
+        self.backend_id = f"local-sqlite-{kind}-sha256:" + actual_hash
         self._stat = self._file_signature()
         with closing(self._connect()) as db:
             meta = {k: json.loads(v) for k, v in db.execute("SELECT key, value FROM metadata")}
@@ -221,6 +230,45 @@ class LocalCorpusBackend:
         db.execute("PRAGMA query_only=ON")
         return db
 
+    def _random_sample(self, query, topk, max_date=None):
+        """Random-retrieval control: same query validation, budget and payload shape
+        as BM25, but the evidence carries no lexical relation to the query.
+
+        Draws are deterministic in (retrieval_seed, query), so a rerun of the same
+        evaluation reproduces the same control pool.
+        """
+        count = self.manifest["document_count"]
+        digest = hashlib.sha256(f"{self.retrieval_seed}\n{query}".encode()).digest()
+        rng = random.Random(int.from_bytes(digest, "big"))
+        # Oversample: max_date filtering and rowid gaps can drop candidates.
+        wanted = min(topk * 8 + topk, count)
+        rowids = rng.sample(range(1, count + 1), wanted)
+        where = "documents.rowid IN (" + ",".join("?" * len(rowids)) + ")"
+        params = list(rowids)
+        if max_date is not None:
+            where += (" AND (json_extract(documents.record, '$.publication_date') IS NULL"
+                      " OR json_extract(documents.record, '$.publication_date') <= ?)")
+            params.append(max_date)
+        try:
+            if self._file_signature() != self._stat:
+                raise BackendError("Frozen local index changed after startup")
+            with closing(self._connect()) as db:
+                rows = dict(db.execute(
+                    f"SELECT documents.rowid, documents.record FROM documents WHERE {where}",
+                    params).fetchall())
+        except (OSError, sqlite3.DatabaseError) as error:
+            raise BackendError(f"Local index read failed ({type(error).__name__})") from None
+        results = []
+        for rowid in rowids:  # Preserve the drawn order, not SQLite's rowid order.
+            if rowid not in rows or len(results) == topk:
+                continue
+            row = json.loads(rows[rowid])
+            row["rank"] = len(results) + 1
+            row["retrieval_score"] = None
+            row["retrieval_score_definition"] = "random-retrieval control; no relevance score"
+            results.append(row)
+        return results
+
     def search(self, query, topk, max_date=None):
         if type(topk) is not int or not 1 <= topk <= 100:
             raise ValueError("topk must be an integer in [1,100]")
@@ -229,6 +277,8 @@ class LocalCorpusBackend:
             raise ValueError("Query has no searchable tokens")
         if len(terms) > MAX_QUERY_TERMS:
             raise ValueError(f"Query exceeds the {MAX_QUERY_TERMS}-term local limit")
+        if self.retrieval == "random":
+            return self._random_sample(query, topk, max_date)
         expression = " OR ".join('"' + term.replace('"', '""') + '"' for term in terms)
         where = "corpus_fts MATCH ?"
         params = [expression]

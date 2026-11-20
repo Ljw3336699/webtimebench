@@ -471,6 +471,10 @@ class LLMGenerationManager:
         return [self._passages2string(result) for result in results]
 
     def _batch_search(self, queries):
+        if os.environ.get('TIMEAGENT_NULL_RETRIEVER') == '1':
+            # Control condition: preserve the agent loop and action space but
+            # return no evidence. Used for a same-decoding no-retrieval baseline.
+            return {'result': [[] for _ in queries]}
         if self.search_client is None:
             raise ValueError('No retrieval service URL was configured')
         try:

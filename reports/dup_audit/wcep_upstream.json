@@ -1,0 +1,13 @@
+{
+  "events": 8158,
+  "events_with_two_or_more": 8158,
+  "articles": 494151,
+  "same_event_pairs_examined": 20801065,
+  "dup_title_pair_rate": 0.0415,
+  "dup_body_pair_rate": 0.0217,
+  "same_day_pair_rate": 0.0232,
+  "events_any_dup": 0.9234,
+  "articles_in_dup": 0.4717,
+  "corpus": "WCEP (upstream distribution)",
+  "input": "events/wcep_full/train.jsonl.gz"
+}

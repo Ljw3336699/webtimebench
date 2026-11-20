@@ -473,6 +473,9 @@ def main(argv=None, on_ready=None):
     parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--topk", type=int, default=3)
     parser.add_argument("--view", choices=VIEWS, default="full")
+    parser.add_argument("--retrieval", choices=("bm25", "random"), default="bm25",
+                        help="random serves topk documents unrelated to the query "
+                             "(random-retrieval control); only valid with --backend local")
     parser.add_argument("--seed", type=int, default=20261103)
     parser.add_argument("--workers", type=int, default=16)
     parser.add_argument("--cache-size", type=int, default=1024)
@@ -505,10 +508,13 @@ def main(argv=None, on_ready=None):
         elif args.backend == "local":
             if not args.index:
                 raise ValueError("--backend local requires --index")
-            backend = LocalCorpusBackend(args.index)
+            backend = LocalCorpusBackend(args.index, retrieval=args.retrieval,
+                                         retrieval_seed=args.seed)
         elif args.backend == "aiapi":
             if args.index:
                 raise ValueError("--index is only valid with --backend local")
+            if args.retrieval != "bm25":
+                raise ValueError("--retrieval random requires --backend local")
             backend = AIAPIBackend(args.host, os.environ.get("AIAPI_AK"), os.environ.get("AIAPI_SK"),
                                    args.timeout, os.environ.get("AIAPI_CLIENT_IP"))
         else:
@@ -520,7 +526,7 @@ def main(argv=None, on_ready=None):
         if engine is not None:
             engine.close()
         parser.exit(2, f"serve_search: {error}\n")
-    print(f"Retrieval service listening on {args.bind}:{server.server_port}; view={args.view}; instance_id={engine.instance_id}; snapshot enabled", flush=True)
+    print(f"Retrieval service listening on {args.bind}:{server.server_port}; view={args.view}; retrieval={args.retrieval}; instance_id={engine.instance_id}; snapshot enabled", flush=True)
     previous_signal = None
     stopping = threading.Event()
     def stop(signum, frame):

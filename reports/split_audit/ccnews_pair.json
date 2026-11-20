@@ -1,0 +1,23 @@
+{
+  "resource": "sentence-transformers/ccnews pair (within)",
+  "schema": "pair",
+  "train_files": [
+    "source/ccnews/pair/train-00000-of-00004.parquet",
+    "source/ccnews/pair/train-00001-of-00004.parquet",
+    "source/ccnews/pair/train-00002-of-00004.parquet",
+    "source/ccnews/pair/train-00003-of-00004.parquet"
+  ],
+  "test_files": [],
+  "within_train": {
+    "headline": {
+      "items": 610976,
+      "items_with_recurring_key": 0.3051,
+      "distinct_keys": 479604
+    },
+    "content": {
+      "items": 614664,
+      "items_with_recurring_key": 0.2784,
+      "distinct_keys": 490753
+    }
+  }
+}

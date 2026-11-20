@@ -1,0 +1,44 @@
+{
+  "normalization": "NFKC, case-fold, alphanumeric only; <YEAR>/<MONTH> masks removed",
+  "resources": [
+    {
+      "resource": "WCEP (Ghalandari et al. 2020), train",
+      "items": 493168,
+      "within_split_dup_content": 0.3251,
+      "within_split_dup_content_min100tokens": 0.2903,
+      "held_out_in_train_headline": 0.0027,
+      "held_out_in_train_content": 0.0007,
+      "held_out_items": 155030
+    },
+    {
+      "resource": "sentence-transformers/ccnews (pair)",
+      "items": 614664,
+      "within_split_dup_content": 0.2784,
+      "within_split_dup_content_min100tokens": 0.2031
+    },
+    {
+      "resource": "Time-Bench comprehension",
+      "items": 49000,
+      "within_split_dup_content": 0.1256,
+      "held_out_in_train_headline": 0.0146,
+      "held_out_in_train_content": 0.0068,
+      "held_out_items": 1024
+    },
+    {
+      "resource": "Time-Bench prediction",
+      "items": 10810,
+      "within_split_dup_content": 0.0,
+      "held_out_in_train_headline": 0.0045,
+      "held_out_in_train_content": 0.0,
+      "held_out_items": 896
+    },
+    {
+      "resource": "WebTimeBench temporal (this paper)",
+      "items": 9087,
+      "within_split_dup_content": 0.0006,
+      "held_out_in_train_content": 0.0,
+      "held_out_items": 1448
+    }
+  ],
+  "boilerplate_note": "Most frequent duplicate bodies include crawl-failure and boilerplate pages (WCEP: NPR copyright stub x139, JavaScript/cookie error page x86; CC-News pair: site boilerplate x2142, email-form page x1894) but also real wire stories (CC-News pair: one Reuters story x1841). The min100tokens column restricts to duplicates of at least 100 normalized tokens as a conservative estimate of full-article duplication."
+}

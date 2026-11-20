@@ -1,0 +1,13 @@
+{
+  "events": 8158,
+  "events_with_two_or_more": 8143,
+  "articles": 138432,
+  "same_event_pairs_examined": 1220588,
+  "dup_title_pair_rate": 0.0582,
+  "dup_body_pair_rate": 0.0291,
+  "same_day_pair_rate": 0.2518,
+  "events_any_dup": 0.8381,
+  "articles_in_dup": 0.3317,
+  "corpus": "WCEP (our processing)",
+  "input": "outputs/wcep_full_repro/corpus.jsonl"
+}
