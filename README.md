@@ -42,8 +42,10 @@ python3 scripts/evaluate_wcep_aggregation.py --articles events/news_events/artic
 ```
 
 Large corpora under `events/` and the `*.parquet`/`*.jsonl` dataset files are stored
-with Git LFS. Run `git lfs pull` before the commands above, or rebuild the tabular
-splits locally with `scripts/build_dataset.py` (the JSON splits are plain files).
+with Git LFS (about 1.7 GB for the two event corpora). GitHub limits LFS bandwidth per
+repository, so pull only what you need, e.g.
+`git lfs pull --include="events/wcep_pilot/*,webtimebench/temporal/*"`; the 50-event pilot is
+enough to run `examples/replay_equivalence.sh`. The JSON splits are plain files.
 
 ## Key results reproduced by these artifacts
 
@@ -95,7 +97,8 @@ See `LICENSE_NOTES.md` for per-source licensing and redistribution notes.
 ## Known limitations
 
 - Source URLs are not recoverable for the document-dating split, so source-disjointness is not
-  claimed; the split is released as derived annotations with a hash-pinned rebuild path.
+  claimed; the split is released as sanitized document text with body hashes; rights in the underlying
+  pages remain with their publishers (see `LICENSE_NOTES.md`).
 - De-duplication is exact-title only; semantic near-duplicates are not removed, so the
   de-duplicated event-level numbers remain upper bounds.
 - `max_date` is an optional serving mode and was not enabled in the training runs.
