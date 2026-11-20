@@ -1,0 +1,49 @@
+{
+  "articles_evaluated": 7207,
+  "topk": 3,
+  "backend": "local-sqlite-fts5-sha256:8f409b61d97dd4981c8866c6f15660ce1459c410799fe680bace7482e720a971",
+  "config": {
+    "query_field": "title",
+    "retrieval": "random",
+    "exclude_exact_title": false,
+    "exclude_identical_body": false,
+    "seed": 20261119
+  },
+  "exact_title_hits_dropped": 1,
+  "same_event_recall_topk": 0.0017,
+  "same_event_recall_after_filters": 0.0017,
+  "aggregate": {
+    "acc_at_0": 0.0128,
+    "acc_at_7": 0.0579,
+    "acc_at_30": 0.2036
+  },
+  "exact_title_excluded": {
+    "recall_same_event": 0.0015,
+    "aggregate": {
+      "acc_at_0": 0.0126,
+      "acc_at_7": 0.0577,
+      "acc_at_30": 0.2036
+    }
+  },
+  "shard": {
+    "index": 0,
+    "num_shards": 4
+  },
+  "sums": {
+    "n": 7207,
+    "recall_hit_raw": 12,
+    "recall_hit_after_filters": 12,
+    "recall_hit_exact_title_excluded": 11,
+    "dropped_exact_title": 1,
+    "hits": {
+      "acc_at_0": 92,
+      "acc_at_7": 417,
+      "acc_at_30": 1467
+    },
+    "hits_exact_title_excluded": {
+      "acc_at_0": 91,
+      "acc_at_7": 416,
+      "acc_at_30": 1467
+    }
+  }
+}

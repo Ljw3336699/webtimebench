@@ -11,6 +11,7 @@ re-run from this release.
 | WebNewsEvents body query 0.765 / 0.283 | same, `--query-field body` | same |
 | WCEP Acc@30 0.505 / 0.379, recall 0.748 / 0.555 (n = 7,251 sample) | `scripts/evaluate_wcep_full_article.py --shard i --num-shards 128` | `events/wcep_full/corpus.jsonl` |
 | Random-retrieval floors 0.091 / 0.084 | same scripts, `--retrieval random` | same corpora |
+| WCEP held-out events (val+test, 2,042 events): Acc@30 0.605 / 0.410, recall 0.771 / 0.534, random 0.204 (n = 7,207 sample) | `scripts/prepare_wcep_full.py --splits val.jsonl.gz test.jsonl.gz`, then `scripts/build_local_index.py` and `scripts/evaluate_wcep_full_article.py --shard 0 --num-shards 4` (add `--exclude-exact-title` / `--retrieval random`) | upstream WCEP val and test files; results in `reports/wcep_heldout/` |
 | Same-title pair rates 0.996 / 0.058 / 0.042 | `scripts/audit_event_duplication.py` | `events/news_events/articles.jsonl`, `events/wcep_full/corpus.jsonl`, upstream WCEP `train.jsonl.gz` |
 | Split audit table (WCEP, CC-News pairs, Time-Bench, WebTimeBench) | `scripts/audit_split_overlap.py` | upstream public releases; results in `reports/split_audit/` |
 | Matched month baseline 0.061 | computed from the gold year-month distribution of `webtimebench/temporal/test.json` | released split |

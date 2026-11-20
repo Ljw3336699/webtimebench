@@ -1,0 +1,49 @@
+{
+  "articles_evaluated": 7207,
+  "topk": 3,
+  "backend": "local-sqlite-fts5-sha256:8f409b61d97dd4981c8866c6f15660ce1459c410799fe680bace7482e720a971",
+  "config": {
+    "query_field": "title",
+    "retrieval": "bm25",
+    "exclude_exact_title": false,
+    "exclude_identical_body": false,
+    "seed": 20261119
+  },
+  "exact_title_hits_dropped": 4139,
+  "same_event_recall_topk": 0.8446,
+  "same_event_recall_after_filters": 0.7709,
+  "aggregate": {
+    "acc_at_0": 0.3807,
+    "acc_at_7": 0.5628,
+    "acc_at_30": 0.6051
+  },
+  "exact_title_excluded": {
+    "recall_same_event": 0.5335,
+    "aggregate": {
+      "acc_at_0": 0.2058,
+      "acc_at_7": 0.3676,
+      "acc_at_30": 0.4095
+    }
+  },
+  "shard": {
+    "index": 0,
+    "num_shards": 4
+  },
+  "sums": {
+    "n": 7207,
+    "recall_hit_raw": 6087,
+    "recall_hit_after_filters": 5556,
+    "recall_hit_exact_title_excluded": 3845,
+    "dropped_exact_title": 4139,
+    "hits": {
+      "acc_at_0": 2744,
+      "acc_at_7": 4056,
+      "acc_at_30": 4361
+    },
+    "hits_exact_title_excluded": {
+      "acc_at_0": 1483,
+      "acc_at_7": 2649,
+      "acc_at_30": 2951
+    }
+  }
+}
