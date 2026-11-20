@@ -43,7 +43,9 @@ def compute_score_em(solution_str, ground_truth, use_search_bonus=True,
     target = reference_date(ground_truth)
     answer = extract_solution(solution_str)
     if reward_type == 'cost_aware' and not eval_mode:
-        details = cost_aware_reward(solution_str, target, executed_searches, cost_aware)
+        # Pass the full ground-truth mapping: cost_by_regime selects the per-search cost from its
+        # 'difficulty' entry, and passing only the date silently charged the default cost.
+        details = cost_aware_reward(solution_str, ground_truth, executed_searches, cost_aware)
         return details if return_details else details['total_reward']
 
     def output(score):

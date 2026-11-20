@@ -35,6 +35,8 @@ def parser():
     p.add_argument("--cost-by-regime", default=None,
                    help="Per-regime search cost, e.g. 'EXP:0.2,IMP:0.01,DIS:0.01' (overrides search-cost per regime)")
     p.add_argument("--invalid-penalty", type=float, default=.25)
+    p.add_argument("--entropy-coeff", type=float, default=0.001,
+                   help="Actor entropy-bonus coefficient (0.001 is the trainer default)")
     p.add_argument("--train-batch-size", type=int, default=512)
     p.add_argument("--ppo-mini-batch-size", type=int, default=128)
     p.add_argument("--micro-batch-per-gpu", type=int, default=2)
@@ -110,6 +112,8 @@ def build_command(a, root=ROOT):
         raise ValueError("Retriever timeout and maximum response bytes must be positive")
     if a.retriever_token_env is not None and not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', a.retriever_token_env):
         raise ValueError("retriever-token-env must name an environment variable")
+    if not math.isfinite(a.entropy_coeff) or a.entropy_coeff < 0:
+        raise ValueError("entropy-coeff must be a nonnegative finite number")
     if any(x < 1 for x in (a.gpus, a.steps, a.train_batch_size, a.ppo_mini_batch_size,
                            a.micro_batch_per_gpu, a.val_batch_size, a.save_freq, a.test_freq)) or a.seed < 0 or a.keep_checkpoints < 0:
         raise ValueError("Batch sizes, gpus and steps must be positive; seed must be nonnegative")
@@ -148,6 +152,7 @@ def build_command(a, root=ROOT):
         "actor_rollout_ref.model.use_remove_padding": "true",
         "actor_rollout_ref.actor.optim.lr": "1e-6",
         "actor_rollout_ref.actor.optim.lr_warmup_steps_ratio": 0.285,
+        "actor_rollout_ref.actor.entropy_coeff": a.entropy_coeff,
         "actor_rollout_ref.actor.ppo_mini_batch_size": a.ppo_mini_batch_size,
         "actor_rollout_ref.actor.ppo_micro_batch_size": global_micro,
         "actor_rollout_ref.actor.state_masking": "true",

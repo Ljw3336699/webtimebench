@@ -66,7 +66,7 @@ cannot be redistributed; they are not reproducible from this release (see
 ## Training code
 
 `training_code/` contains the modified Search-R1/verl fork used to train the policy
-(Qwen2.5-7B-Instruct; PPO; 400 steps; regime-aware cost with per-regime search costs;
+(Qwen2.5-7B-Instruct; PPO; 400 steps; uniform per-search cost, `--search-cost`;
 details in the paper's setup section). It includes the patched `verl` library, the
 `timeagent` task package, `pyproject.toml`/`requirements.txt`, and the training entry
 scripts. The base model uses open Qwen2.5-7B-Instruct weights; trained checkpoints are
@@ -76,9 +76,9 @@ not shipped due to size and can be requested via repository issues.
 pip install -r training_code/requirements.txt
 # training (see paper for exact hyperparameters):
 python scripts/launch.py train --model <qwen2.5-7b-instruct> --variant temporal \
-    --gpus 8 --steps 400 --cost-by-regime "EXP:0.2,IMP:0.01,DIS:0.01" \
+    --gpus 8 --steps 400 \
     --quality-scales-days 7 30 365 --quality-weights 0.4 0.4 0.2 --invalid-penalty 0.3 \
-    --test-freq 25 --save-freq 100 --keep-checkpoints 3 \
+    --search-cost 0.1 --test-freq 25 --save-freq 100 --keep-checkpoints 3 \
     --retriever-url <frozen-index-server-url> --code-root training_code --run
 ```
 
@@ -100,6 +100,9 @@ See `LICENSE_NOTES.md` for per-source licensing and redistribution notes.
   de-duplicated event-level numbers remain upper bounds.
 - `max_date` is an optional serving mode and was not enabled in the training runs.
 - Trained-policy runs are unstable late in training; checkpoints must be selected on dev.
+- `--cost-by-regime` was silently ignored in releases up to 13a6795 (the reward received only the
+  date, so every regime was charged the default cost); it is fixed and covered by
+  `tests/test_reward.py`. All reported runs used a uniform per-search cost.
 
 ## Retrieval environment API
 
