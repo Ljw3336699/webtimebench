@@ -5,6 +5,9 @@ temporal-shift and evidence-regime splits, frozen retrieval indexes (reproducibl
 shipped corpora), an evaluation protocol (full-denominator metrics, four-view ablation,
 retrieval time-window filter), and event-level corpora for when retrieval *does* help.
 
+To report a result under the protocol, follow `PROTOCOL_CHECKLIST.md` (inputs, denominators,
+budget, controls, seeds, outputs, failure handling).
+
 ## Scope and positioning
 
 WebTimeBench is a dataset-and-evaluation resource for agentic information retrieval. Its
