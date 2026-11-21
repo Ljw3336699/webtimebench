@@ -1,0 +1,245 @@
+[
+ {
+  "model": "Llama-3.2-3B-Instruct",
+  "condition": "null",
+  "n": 1448,
+  "coverage": 0.535,
+  "score": 0.31,
+  "acc_at_30": 0.1906,
+  "search_rate": 0.615
+ },
+ {
+  "model": "Llama-3.2-3B-Instruct",
+  "condition": "random",
+  "n": 1448,
+  "coverage": 0.37,
+  "score": 0.2314,
+  "acc_at_30": 0.1285,
+  "search_rate": 0.615
+ },
+ {
+  "model": "Llama-3.2-3B-Instruct",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 0.41,
+  "score": 0.2711,
+  "acc_at_30": 0.1443,
+  "search_rate": 0.615
+ },
+ {
+  "model": "policy A150",
+  "condition": "null",
+  "n": 1448,
+  "coverage": 0.999,
+  "score": 0.3265,
+  "acc_at_30": 0.0801,
+  "search_rate": 0.738
+ },
+ {
+  "model": "policy A150",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 0.977,
+  "score": 0.4594,
+  "acc_at_30": 0.1547,
+  "search_rate": 0.738
+ },
+ {
+  "model": "policy C150",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 1.0,
+  "score": 0.5275,
+  "acc_at_30": 0.2341,
+  "search_rate": 0.0
+ },
+ {
+  "model": "policy ref100",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 0.999,
+  "score": 0.6142,
+  "acc_at_30": 0.3667,
+  "search_rate": 0.0
+ },
+ {
+  "model": "policy ref150",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 0.997,
+  "score": 0.467,
+  "acc_at_30": 0.1899,
+  "search_rate": 0.024
+ },
+ {
+  "model": "Qwen2.5-3B (base)",
+  "condition": "null",
+  "n": 1448,
+  "coverage": 0.033,
+  "score": 0.0204,
+  "acc_at_30": 0.0138,
+  "search_rate": 0.265
+ },
+ {
+  "model": "Qwen2.5-3B (base)",
+  "condition": "random",
+  "n": 1448,
+  "coverage": 0.035,
+  "score": 0.0171,
+  "acc_at_30": 0.011,
+  "search_rate": 0.264
+ },
+ {
+  "model": "Qwen2.5-3B (base)",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 0.022,
+  "score": 0.0145,
+  "acc_at_30": 0.011,
+  "search_rate": 0.263
+ },
+ {
+  "model": "Qwen2.5-3B-Instruct",
+  "condition": "null",
+  "n": 1448,
+  "coverage": 0.928,
+  "score": 0.5441,
+  "acc_at_30": 0.3163,
+  "search_rate": 0.689
+ },
+ {
+  "model": "Qwen2.5-3B-Instruct",
+  "condition": "random",
+  "n": 1448,
+  "coverage": 0.825,
+  "score": 0.5022,
+  "acc_at_30": 0.2928,
+  "search_rate": 0.689
+ },
+ {
+  "model": "Qwen2.5-3B-Instruct",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 0.82,
+  "score": 0.5074,
+  "acc_at_30": 0.2983,
+  "search_rate": 0.689
+ },
+ {
+  "model": "Qwen2.5-7B-Instruct",
+  "condition": "null",
+  "n": 1448,
+  "coverage": 0.738,
+  "score": 0.5053,
+  "acc_at_30": 0.3481,
+  "search_rate": 0.441
+ },
+ {
+  "model": "Qwen2.5-7B-Instruct",
+  "condition": "random",
+  "n": 1448,
+  "coverage": 0.656,
+  "score": 0.4664,
+  "acc_at_30": 0.328,
+  "search_rate": 0.441
+ },
+ {
+  "model": "Qwen2.5-7B-Instruct",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 0.657,
+  "score": 0.4796,
+  "acc_at_30": 0.3405,
+  "search_rate": 0.441
+ },
+ {
+  "model": "Qwen2.5-7B-Instruct (standalone client)",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 0.781,
+  "score": 0.5246,
+  "acc_at_30": 0.3419,
+  "search_rate": 0.434
+ },
+ {
+  "model": "Qwen3-8B (standalone, no-think)",
+  "condition": "null",
+  "n": 1448,
+  "coverage": 0.931,
+  "score": 0.6262,
+  "acc_at_30": 0.3771,
+  "search_rate": 0.458
+ },
+ {
+  "model": "Qwen3-8B (standalone, no-think)",
+  "condition": "random",
+  "n": 1448,
+  "coverage": 0.84,
+  "score": 0.5761,
+  "acc_at_30": 0.3591,
+  "search_rate": 0.459
+ },
+ {
+  "model": "Qwen3-8B (standalone, no-think)",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 0.853,
+  "score": 0.5833,
+  "acc_at_30": 0.3584,
+  "search_rate": 0.458
+ },
+ {
+  "model": "DeepSeek-R1-Distill-Qwen-7B",
+  "condition": "null",
+  "n": 1448,
+  "coverage": 0.602,
+  "score": 0.4192,
+  "acc_at_30": 0.2749,
+  "search_rate": 0.147
+ },
+ {
+  "model": "DeepSeek-R1-Distill-Qwen-7B",
+  "condition": "random",
+  "n": 1448,
+  "coverage": 0.587,
+  "score": 0.4072,
+  "acc_at_30": 0.268,
+  "search_rate": 0.063
+ },
+ {
+  "model": "DeepSeek-R1-Distill-Qwen-7B",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 0.581,
+  "score": 0.4035,
+  "acc_at_30": 0.2659,
+  "search_rate": 0.045
+ },
+ {
+  "model": "Time-R1-Theta2 (3B)",
+  "condition": "null",
+  "n": 1448,
+  "coverage": 0.782,
+  "score": 0.5739,
+  "acc_at_30": 0.3218,
+  "search_rate": 0.614
+ },
+ {
+  "model": "Time-R1-Theta2 (3B)",
+  "condition": "random",
+  "n": 1448,
+  "coverage": 0.802,
+  "score": 0.5739,
+  "acc_at_30": 0.3177,
+  "search_rate": 0.614
+ },
+ {
+  "model": "Time-R1-Theta2 (3B)",
+  "condition": "real",
+  "n": 1448,
+  "coverage": 0.809,
+  "score": 0.5807,
+  "acc_at_30": 0.3156,
+  "search_rate": 0.614
+ }
+]

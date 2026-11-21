@@ -155,7 +155,11 @@ def build_command(a, root=ROOT):
         "actor_rollout_ref.actor.entropy_coeff": a.entropy_coeff,
         "actor_rollout_ref.actor.ppo_mini_batch_size": a.ppo_mini_batch_size,
         "actor_rollout_ref.actor.ppo_micro_batch_size": global_micro,
-        "actor_rollout_ref.actor.state_masking": "true",
+        # State masking only applies when the rollout inserts retrieved observations. With
+        # --no-search there are no observation tokens to mask, and _create_loss_mask is skipped
+        # (gated on do_search), so leaving state_masking on makes the actor update raise
+        # KeyError('loss_mask'). Tie it to whether search is active.
+        "actor_rollout_ref.actor.state_masking": str(search).lower(),
         "actor_rollout_ref.actor.fsdp_config.param_offload": "true",
         "actor_rollout_ref.actor.fsdp_config.grad_offload": "true",
         "actor_rollout_ref.actor.fsdp_config.optimizer_offload": "true",
