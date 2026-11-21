@@ -21,7 +21,7 @@ not the resource contribution.
 |---|---|---|
 | `webtimebench/` | `clean/{train,dev,test}.json/{.parquet}` (17,557/923/2,894), `temporal/{...}` (9,087/471/1,448, train/dev <= 2023, test >= 2024), `quarantine/`, `excluded/`, `id_mapping.json`, `manifest.json` | ~194 MB |
 | `events/news_events/` | WebNewsEvents: 49,648 events / 161,122 articles (CC-News 2017-2018, normalized-title clustering, gold = article dates) + corpus + index manifest | ~1.7 GB |
-| `events/wcep_full/` | WCEP (train split processed): 8,158 human-annotated events / 138,432 articles (83.2% with parsed dates) + corpus + index manifest | ~1.2 GB |
+| `events/wcep_full/` | WCEP (train split processed): 8,158 editor-defined events / 138,432 articles (article membership is an automatic assignment) (83.2% with parsed dates) + corpus + index manifest | ~1.2 GB |
 | `events/wcep_pilot/` | WCEP pilot: 50 events / 199 articles | ~2 MB |
 | `scripts/` | dataset builder, corpus preparation, frozen local BM25 index builder, retrieval server (four views + time-window filter), WCEP/news evaluation, Time-Bench evaluation, PPO launcher, gate-experiment runner | |
 | `reports/` | key experiment reports (JSON) | |
@@ -56,9 +56,9 @@ Event-level results run from the shipped corpora (samples are systematic, every 
 
 - WebNewsEvents (automatic title clusters), title query, top-3: Acc@30 0.841 and same-event
   recall 0.978 as shipped; **0.216 and 0.005** after exact-title de-duplication (body-field
-  queries: 0.765 -> 0.283). Random retrieval: 0.091.
-- WCEP (human-annotated events): Acc@30 0.505 and recall 0.748 as shipped; **0.379 and 0.555**
-  after de-duplication. Random retrieval: 0.084.
+  queries: 0.765 -> 0.283). Random retrieval (same queries): 0.088.
+- WCEP (editor-defined events, automatic article assignment): Acc@30 0.505 and recall 0.748 as shipped; **0.379 and 0.555**
+  after de-duplication. Random retrieval (same queries): 0.076.
 - Corpus-level audit (`scripts/audit_event_duplication.py`): fraction of same-event pairs with
   identical normalized titles is 0.996 (WebNewsEvents), 0.058 (our WCEP processing), 0.042
   (WCEP as published). `scripts/audit_split_overlap.py` reports within-split duplication and

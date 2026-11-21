@@ -8,7 +8,7 @@
 | EXP/IMP/DIS regime labels | **New** | Assigned by the project pipeline; 102-record author audit (96 confirmations, 6 proposed corrections). |
 | Evaluation protocol | **New** | Full-denominator metrics, temporal-shift split, four-view design, optional retrieval date window. |
 | Frozen BM25 indexes | **New build** | SQLite/FTS5, SHA-256 manifests; rebuildable from shipped corpora. |
-| WCEP full / pilot | **Reused** | Upstream human-annotated event boundaries and article dates; article text retains upstream terms. |
+| WCEP full / pilot | **Reused** | Upstream editor-defined events (summary, date, cited sources); 98% of articles are attached from Common Crawl by an automatic event assignment (score 0.90-1.00); article text retains upstream terms. |
 | WebNewsEvents | **Re-processed** | Clustered from CC-News 2017–2018 by normalized title; gold dates are upstream article dates. |
 
 ## Records and fields

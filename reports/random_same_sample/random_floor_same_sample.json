@@ -1,0 +1,54 @@
+{
+ "wcep_train": {
+  "n": 7251,
+  "shards": "0-7 of 128",
+  "sums": {
+   "n": 7251,
+   "recall_hit_raw": 3,
+   "recall_hit_after_filters": 3,
+   "recall_hit_exact_title_excluded": 3,
+   "dropped_exact_title": 0,
+   "hits": {
+    "acc_at_0": 195,
+    "acc_at_7": 269,
+    "acc_at_30": 551
+   },
+   "hits_exact_title_excluded": {
+    "acc_at_0": 195,
+    "acc_at_7": 269,
+    "acc_at_30": 551
+   }
+  },
+  "rates": {
+   "acc_at_0": 0.0269,
+   "acc_at_7": 0.0371,
+   "acc_at_30": 0.076
+  }
+ },
+ "webnewsevents": {
+  "n": 10072,
+  "shards": "0-7 of 128",
+  "sums": {
+   "n": 10072,
+   "recall_hit_raw": 0,
+   "recall_hit_after_filters": 0,
+   "recall_hit_exact_title_excluded": 0,
+   "dropped_exact_title": 0,
+   "hits": {
+    "acc_at_0": 481,
+    "acc_at_7": 845,
+    "acc_at_30": 884
+   },
+   "hits_exact_title_excluded": {
+    "acc_at_0": 481,
+    "acc_at_7": 845,
+    "acc_at_30": 884
+   }
+  },
+  "rates": {
+   "acc_at_0": 0.0478,
+   "acc_at_7": 0.0839,
+   "acc_at_30": 0.0878
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "index_sha256": "ab8a55b89b3c60cec15eb051fc24995de13bd996698fa23ed2f0d7586196b0f7",
+ "split": "webtimebench/temporal/test.json",
+ "n_queries": 1448,
+ "queries_with_dated_hit": 1374,
+ "topk": 5,
+ "max_date": null,
+ "dated_indexed_documents": 1936,
+ "dated_documents_in_gold_months_share": 0.01447065773252363,
+ "retrieved_dates_per_query": {
+  "1": 2,
+  "2": 3,
+  "3": 3,
+  "5": 1366
+ },
+ "observed_rate": 0.10844250363901019,
+ "random_expected_rate_same_budget": 0.06935032545573383,
+ "random_simulated_rate_same_budget": 0.07241630276564703,
+ "single_draw_collision_rate_of_gold": 0.06064566099935898,
+ "observed_minus_random_expected": 0.03909217818327636,
+ "definition": "hit = any retrieved dated document shares the gold (year, month); random = the same number of dated documents drawn from the same index without replacement"
+}

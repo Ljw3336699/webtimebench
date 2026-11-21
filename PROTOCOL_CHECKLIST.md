@@ -11,7 +11,7 @@ Use this list when reporting a result under the protocol. Each item names the sc
 - Document-level metrics: exact date, Acc@7, Acc@30 over all eligible records; an invalid or missing prediction counts as a failure (`src/timeagent/evaluation.py`).
 - MAE and error percentiles only over valid predictions, always next to the prediction coverage.
 - Retrieval hit rates: state both the rate over all queries and over queries that returned dated evidence.
-- Compare any month-level hit rate with the year-month collision rate of the gold dates (0.0606 on the evidence set), not with 1/12.
+- Compare a month-level hit rate with random retrieval under the same criterion, budget and index: for a hit on any of m retrieved dates, 1 - C(N-K, m)/C(N, m), averaged over the same queries (`scripts/matched_random_baseline.py`). The single-draw collision rate of the gold dates (0.0606) fits only m = 1; 1/12 is not a matched baseline.
 
 ## Budget and decoding
 - Search budget: at most 2 executed searches per record, top-3 documents per search, plus one forced final turn. A search counts when it is dispatched, including failed requests.
